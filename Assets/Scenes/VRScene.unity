@@ -661,6 +661,10 @@ PrefabInstance:
       value: Map
       objectReference: {fileID: 0}
     - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
+      propertyPath: _options.scalingOptions.scalingType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
       propertyPath: _options.extentOptions.defaultExtents.rangeAroundTransformOptions.targetTransform
       value: 
       objectReference: {fileID: 878056089}

@@ -22,7 +22,7 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 		Material _material;
 
 		[SerializeField]
-		Transform[] _waypoints;
+		List<Transform> _waypoints;
 		private List<Vector3> _cachedWaypoints;
 
 		[SerializeField]
@@ -50,7 +50,11 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 
 		public void Start()
 		{
-			_cachedWaypoints = new List<Vector3>(_waypoints.Length);
+			foreach (Transform child in transform)
+			{
+				_waypoints.Add(child);
+			}
+			_cachedWaypoints = new List<Vector3>(_waypoints.Count);
 			foreach (var item in _waypoints)
 			{
 				_cachedWaypoints.Add(item.position);
@@ -73,7 +77,7 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 
 		void Query()
 		{
-			var count = _waypoints.Length;
+			var count = _waypoints.Count;
 			var wp = new Vector2d[count];
 			for (int i = 0; i < count; i++)
 			{
@@ -89,7 +93,7 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 			while (true)
 			{
 				yield return new WaitForSeconds(UpdateFrequency);
-				for (int i = 0; i < _waypoints.Length; i++)
+				for (int i = 0; i < _waypoints.Count; i++)
 				{
 					if (_waypoints[i].position != _cachedWaypoints[i])
 					{

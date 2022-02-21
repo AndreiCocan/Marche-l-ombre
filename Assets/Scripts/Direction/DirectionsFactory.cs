@@ -93,6 +93,14 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 			while (true)
 			{
 				yield return new WaitForSeconds(UpdateFrequency);
+
+				_waypoints = new List<Transform>();
+
+				foreach (Transform child in transform)
+				{
+					_waypoints.Add(child);
+				}
+
 				for (int i = 0; i < _waypoints.Count; i++)
 				{
 					if (_waypoints[i].position != _cachedWaypoints[i])
@@ -102,10 +110,15 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 					}
 				}
 
-				if (_recalculateNext)
+				if (_recalculateNext && _waypoints.Count>0)
 				{
 					Query();
 					_recalculateNext = false;
+				}
+
+				if (_waypoints.Count <= 0)
+				{
+					Destroy(_directionsGO);
 				}
 			}
 		}

@@ -512,11 +512,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 344276542}
   _locationStrings:
-  - 48.119829, -1.673704
+  - 48.117323, -1.679039
   - 48.106286, -1.677838
   _user: {fileID: 1099924158}
-  _spawnScale: 1
+  _spawnScale: 100
   _markerPrefab: {fileID: 8531969249433503752, guid: 869946844b3d9c3449b022ef2011eff7, type: 3}
+  visitedWaypointDistance: 20
 --- !u!114 &1490999880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,7 +535,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 72a54fd58e79618408c60d91df61d553, type: 2}
   _material: {fileID: 2100000, guid: 49b5d148287c83443bd632e6d5b5bd6f, type: 2}
   _waypoints: []
-  UpdateFrequency: 2
+  UpdateFrequency: 1
 --- !u!4 &1490999881
 Transform:
   m_ObjectHideFlags: 0
@@ -778,6 +779,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2309221069219689771, guid: 6bdcfd92b46cf3f46a01dc27b8041c75, type: 3}
+      propertyPath: m_MoveSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2309221069219689771, guid: 6bdcfd92b46cf3f46a01dc27b8041c75, type: 3}
       propertyPath: m_RightHandMoveAction.m_UseReference
       value: 0

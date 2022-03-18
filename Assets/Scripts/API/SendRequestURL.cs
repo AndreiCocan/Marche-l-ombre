@@ -6,7 +6,7 @@ using System;
 using System.Net.Http;
 using System.Text;
 
-public class NewBehaviourScript : MonoBehaviour
+public class SendRequestURL : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     async static void Search()
     {
+    Debug.Log("Hello");
     //...
     HttpClient client = new HttpClient();
     //client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", key);
@@ -32,7 +33,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     string contentString = await response.Content.ReadAsStringAsync();
     dynamic parsedJson = JsonConvert.DeserializeObject(contentString);
-    Console.WriteLine("Hello");
-    Console.WriteLine(parsedJson);
+    
+    Debug.Log(parsedJson);
     }
 }

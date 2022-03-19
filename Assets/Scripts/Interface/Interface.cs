@@ -7,17 +7,12 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 public class Interface : MonoBehaviour
 {
-    public GameObject main;
-    public Vector3 offSet;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public GameObject rightArm;
+    public Vector3 offSetInterface;
 
     // Update is called once per frame
-    void lateUpdate()
+    void LateUpdate()
     {
-        transform.position = main.transform.position + offSet;
+        transform.position = rightArm.transform.position + offSetInterface;
     }
 }

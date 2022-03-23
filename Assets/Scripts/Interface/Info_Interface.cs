@@ -3,36 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class Info_Interface : MonoBehaviour
 {
-    //The differents buildings
-    /* [SerializeField] private int nombreDeBatiments = 0;
-     [SerializeField] private GameObject[] buildings;
-     private GameObject bat;
-     private float distanceDuBatiments = 0;*/
+    /* TODO */
 
-    //Variables for the vision of the camera
+    // Variables for the vision of the camera
+    [SerializeField] GameObject camera;
     private Vector3 direction;
+    private Vector3 coordinate;
+    private Vector3 difference;
     private float vu;
+    private double distance;
+    
+    //Variables for the text zones on the interface
+    [SerializeField] TextMeshProUGUI namePoint;
+    [SerializeField] TextMeshProUGUI geographicInfos;
+    [SerializeField] TextMeshProUGUI detailledInfos;
 
-    //Variables to show the interface
-    private GameObject RightHand;
-    private GameObject vRInterface;
-    private float armRotationX;
-
-
-    // Start is called before the first frame update
-    void Start()
+    // Detect if the user is looking at the point of interest
+    private bool IsFacing()
     {
-        RightHand = GameObject.Find("RightHand Controller");
-        vRInterface = RightHand.transform.GetChild(0).GetChild(0).gameObject;
-    }
-
-    private bool IsFacing(GameObject batiment)
-    {
-        direction = (batiment.transform.position - transform.position).normalized;
+        coordinate = /* Take the exact coordinate of the point of interest (API script) */
+        direction = (coordinate - camera.transform.position).normalized;
         vu = Vector3.Dot(direction, transform.forward);
+
         if (vu <= 1 && vu >= 0.7)
         {
             return true;
@@ -43,38 +39,32 @@ public class Info_Interface : MonoBehaviour
         }
     }
 
-    //If the user is near an interessting building the text corresponding to this building appear, if not reset guide;
+    private bool IsNear()
+    {
+        coordinate = /* Take the exact coordinate of the point of interest (API script) */
+        difference = new Vector3(camera.transform.position.x - coordinate.x, camera.transform.position.y - coordinate.y, camera.transform.position.z - coordinate.z);
+        distance = Math.Sqrt(Math.Pow(difference.x, 2f) + Math.Pow(difference.y, 2f) + Math.Pow(difference.z, 2f));
+        if (distance < 40)
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
+    }
+
+    // Change the informations on the canva depending on the point of interest location
     void UpdateInfos()
     {
-        /* for (int i = 0; i < nombreDeBatiments; i++)
-         {
-             bat = GameObject.Find("bat" + i);
-             distanceDuBatiments = Mathf.Sqrt(Mathf.Pow(bat.transform.position.x - transform.position.x, 2) + Mathf.Pow(bat.transform.position.y - transform.position.y, 2) + Mathf.Pow(bat.transform.position.z - transform.position.z, 2));
-             if (distanceDuBatiments < 40)
-             {
-                 infos[i].text = "Guide :";
-                 bat.transform.GetChild(0).gameObject.SetActive(true);
-
-                 if (IsFacing(bat))
-                 {
-                     infosText = "This building is really interesting !";
-                     infos[i].text = "Guide :" + infosText;
-                 }
-             }
-             else
-             {
-                 infos[i].text = "Guide :";
-                 bat.transform.GetChild(0).gameObject.SetActive(false);
-             }
-
-         }*/
-
-
+        /* Select the right infos on the json file */
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdateInfos();
+        if (IsFacing() && IsNear())
+        {
+            UpdateInfos();
+        }
     }
 }

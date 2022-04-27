@@ -3,33 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-
+using Mapbox.Utils;
 
 public class WikipediaAPI : MonoBehaviour
 {
-    public string Lat= "";
-    public string Lon = "";
-    public string Name = "";
-    private string finalUrl;
+    public Vector2d latlong= new Vector2d(0,0);
+    public  string Name = "";
     string urlByName= @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=";
     string urlByGeoSearch = @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&list=geosearch&gsradius=10&gscoord=";
     [SerializeField]
     private Data data;
-    private string lastLat;
-    private string lastLon;    
-    private string title;
-    private string extract;
-    
+    public Vector2d Lastlatlong = new Vector2d(0, 0);
+    public string LastName = "";
 
 
     void Start()
     {
         Search();
     }
- 
+    
+    
     public void Search()
     {
-        if(Lat=="" || Lon ==" ")
+        if (latlong.x == 0 && latlong.y == 0)
         {
             data.pages.extract = "";
             data.pages.title = "";
@@ -37,18 +33,40 @@ public class WikipediaAPI : MonoBehaviour
             return;
         }
 
-        if(!(Lat== lastLat && Lon==lastLon))
+        if (!(latlong.x == Lastlatlong.x && latlong.y == Lastlatlong.y))
         {
             StartCoroutine(LoadData());
-        } else
+        }
+        else
+        {
+            //loadingPanel.SetActive(false);
+        }
+    }
+    public void Search(Vector2d latlon, string name)
+    {
+        this.latlong = latlon;
+        Name = name;
+        if(latlong.x == 0 && latlong.y == 0)
+        {
+            data.pages.extract = "";
+            data.pages.title = "";
+            data.found = false;
+            return;
+        }
+
+        if (!string.Equals(Name,LastName))
+        {
+            StartCoroutine(LoadData());
+        }
+        else
         {
             //loadingPanel.SetActive(false);
         }
     }
 
-    IEnumerator LoadData()
+    IEnumerator  LoadData()
     {
-        WWW wwwGeosearch = new WWW(urlByGeoSearch+Lat+"|"+Lon);
+        WWW wwwGeosearch = new WWW(urlByGeoSearch+ latlong.x + "|"+ latlong.y);
         yield return wwwGeosearch;
         if(wwwGeosearch.error==null)
         {
@@ -58,13 +76,10 @@ public class WikipediaAPI : MonoBehaviour
             if(result.Length>1)
             {
                 data.found = true;
-                lastLat = Lat;
-                lastLon = Lon;
+                Lastlatlong = latlong;
                 string newJson = "{\"pageid" + result[1];
                 newJson = newJson.Substring(0, newJson.Length - 3);
                 data.pages = JsonUtility.FromJson<pages>(newJson);
-                
-
             }
             else
             {
@@ -93,6 +108,7 @@ public class WikipediaAPI : MonoBehaviour
                     string newJson = "{\"pageid" + result[1];
                     newJson = newJson.Substring(0, newJson.Length - 3);
                     data.pages = JsonUtility.FromJson<pages>(newJson);
+                    LastName = Name;
 
                 }
                 else

@@ -9,9 +9,23 @@ public class MicrosoftTTS : MonoBehaviour
 {
     static string YourSubscriptionKey = "074073d5e4954fad81b11c7a8ce0e6b7";
     static string YourServiceRegion = "francecentral";
-
+    
     [SerializeField]
     string textToSay;
+    [SerializeField]
+    Voices voice;
+    public enum Voices
+    {
+        Denise,
+        Henri,
+        Ariane,
+        Fabrice,
+        Sylvie,
+        Antoine,
+        Jean
+    }
+
+    private static string voiceName;
 
 
     static void OutputSpeechSynthesisResult(SpeechSynthesisResult speechSynthesisResult, string text)
@@ -41,7 +55,7 @@ public class MicrosoftTTS : MonoBehaviour
     {
         var speechConfig = SpeechConfig.FromSubscription(YourSubscriptionKey, YourServiceRegion);
         // The language of the voice that speaks.
-        speechConfig.SpeechSynthesisVoiceName = "fr-FR-DeniseNeural";
+        speechConfig.SpeechSynthesisVoiceName = voiceName;
 
         using (var speechSynthesizer = new SpeechSynthesizer(speechConfig))
         {
@@ -51,15 +65,33 @@ public class MicrosoftTTS : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    async void Start()
+    private void Update()
     {
-        await Speech(textToSay);
+        switch (voice)
+        {
+            case Voices.Denise:
+                voiceName = "fr-FR-DeniseNeural";
+                break;
+            case Voices.Henri:
+                voiceName = "fr-FR-HenriNeural";
+                break;
+            case Voices.Ariane:
+                voiceName = "fr-FR-ArianeNeural";
+                break;
+            case Voices.Fabrice:
+                voiceName = "fr-FR-FabriceNeural";
+                break;
+            case Voices.Sylvie:
+                voiceName = "fr-CA-SylvieNeural";
+                break;
+            case Voices.Antoine:
+                voiceName = "fr-CA-AntoineNeural";
+                break;
+            case Voices.Jean:
+                voiceName = "fr-FR-JeanNeural";
+                break;
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

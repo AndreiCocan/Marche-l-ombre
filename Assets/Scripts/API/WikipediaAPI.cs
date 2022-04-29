@@ -8,41 +8,19 @@ using Mapbox.Utils;
 public class WikipediaAPI : MonoBehaviour
 {
     public Vector2d latlong= new Vector2d(0,0);
+    public Vector2d Lastlatlong = new Vector2d(0, 0);
     public  string Name = "";
+    public string LastName = "";
+    
+    
     string urlByName= @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=";
     string urlByGeoSearch = @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&list=geosearch&gsradius=10&gscoord=";
+    
     [SerializeField]
     private Data data;
-    public Vector2d Lastlatlong = new Vector2d(0, 0);
-    public string LastName = "";
 
-
-    void Start()
-    {
-        Search();
-    }
     
-    
-    public void Search()
-    {
-        if (latlong.x == 0 && latlong.y == 0)
-        {
-            data.pages.extract = "";
-            data.pages.title = "";
-            data.found = false;
-            return;
-        }
-
-        if (!(latlong.x == Lastlatlong.x && latlong.y == Lastlatlong.y))
-        {
-            StartCoroutine(LoadData());
-        }
-        else
-        {
-            //loadingPanel.SetActive(false);
-        }
-    }
-    public void Search(Vector2d latlon, string name)
+    public async void Search(Vector2d latlon, string name)
     {
         this.latlong = latlon;
         Name = name;
@@ -57,10 +35,7 @@ public class WikipediaAPI : MonoBehaviour
         if (!string.Equals(Name,LastName))
         {
             StartCoroutine(LoadData());
-        }
-        else
-        {
-            //loadingPanel.SetActive(false);
+
         }
     }
 
@@ -86,9 +61,6 @@ public class WikipediaAPI : MonoBehaviour
                 data.pages.title = Name;
                 data.found = false;
             }
-
-            Debug.Log(data.pages.title);
-
         }
 
         string[] nameRes = data.pages.title.Split('—');
@@ -118,8 +90,11 @@ public class WikipediaAPI : MonoBehaviour
                 }
                 
             }
-            Debug.Log(data.pages.extract);
+
         }
+
+        Debug.Log(data.pages.extract);
+        yield return MicrosoftTTS.Speech(data.pages.extract);
 
     }
 }

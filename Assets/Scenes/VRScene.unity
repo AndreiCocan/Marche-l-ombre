@@ -653,8 +653,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2116733711}
   - component: {fileID: 2116733710}
+  - component: {fileID: 2116733712}
   m_Layer: 0
-  m_Name: Wikipedia
+  m_Name: APIManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -672,9 +673,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d75f1cb284c0c4aa017090afe1db02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lat: 48.12137
-  Lon: -1.66848
+  latlong:
+    x: 0
+    y: 0
+  Lastlatlong:
+    x: 0
+    y: 0
   Name: Tour Eiffel
+  LastName: 
   data:
     found: 0
     pages:
@@ -696,6 +702,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2116733712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116733709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ab9b5d7f8290547ac44fbdcc7cfe1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textToSay: Hello
 --- !u!1001 &340062246394589509
 PrefabInstance:
   m_ObjectHideFlags: 0

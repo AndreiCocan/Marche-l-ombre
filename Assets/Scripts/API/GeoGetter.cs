@@ -17,10 +17,10 @@ public class GeoGetter : MonoBehaviour, IFeaturePropertySettable
 	GameObject parent;
 
 	[SerializeField]
-	public CharacterController player;
+	private CharacterController player;
 
-
-    public WikipediaAPI WikipediaAPI;
+    
+    private WikipediaAPI WikipediaAPI;
     
     [SerializeField]
 	float visitedDistance = 20;

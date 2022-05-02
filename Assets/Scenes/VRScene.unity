@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 440874077}
   - component: {fileID: 440874076}
   - component: {fileID: 440874079}
+  - component: {fileID: 440874080}
   m_Layer: 0
   m_Name: Interface
   m_TagString: Untagged
@@ -437,6 +438,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightArm: {fileID: 7895399636583690397}
   offSetInterface: {x: 0, y: 0, z: 0}
+--- !u!114 &440874080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440874074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b8500a08a53764da6b2afc65403377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 7895399636583690398}
+  namePoint: {fileID: 586172496}
+  geographicInfos: {fileID: 1617097252}
+  detailledInfos: {fileID: 1058588110}
 --- !u!21 &520737159
 Material:
   serializedVersion: 6
@@ -1875,6 +1892,11 @@ Camera:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7895399636583690397 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 9136066891820467720, guid: 6bdcfd92b46cf3f46a01dc27b8041c75, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8883450374512543279, guid: 6bdcfd92b46cf3f46a01dc27b8041c75, type: 3}
+  m_PrefabInstance: {fileID: 7895399636583690394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7895399636583690398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6076894930390653454, guid: 6bdcfd92b46cf3f46a01dc27b8041c75, type: 3}
   m_PrefabInstance: {fileID: 7895399636583690394}
   m_PrefabAsset: {fileID: 0}

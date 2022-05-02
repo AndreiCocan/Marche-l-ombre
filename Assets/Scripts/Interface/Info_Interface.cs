@@ -7,6 +7,10 @@ using System;
 
 public class Info_Interface : MonoBehaviour
 {
+    // Data
+    [SerializeField]
+    private GeoGetter reference;
+
     // Variables for the vision of the camera
     [SerializeField]
     private GameObject camera;
@@ -25,9 +29,8 @@ public class Info_Interface : MonoBehaviour
     private TextMeshProUGUI detailledInfos;
 
     // Detect if the user is looking at the point of interest
-    private bool IsFacing()
+    private bool IsFacing(Vector3 coordinate)
     {
-        coordinate = /* Take the exact coordinate of the point of interest (API script) */
         direction = (coordinate - camera.transform.position).normalized;
         vu = Vector3.Dot(direction, transform.forward);
 
@@ -41,9 +44,8 @@ public class Info_Interface : MonoBehaviour
         }
     }
 
-    private bool IsNear()
+    private bool IsNear(Vector3 coordinate)
     {
-        coordinate = /* Take the exact coordinate of the point of interest (API script) */
         difference = new Vector3(camera.transform.position.x - coordinate.x, camera.transform.position.y - coordinate.y, camera.transform.position.z - coordinate.z);
         distance = Math.Sqrt(Math.Pow(difference.x, 2f) + Math.Pow(difference.y, 2f) + Math.Pow(difference.z, 2f));
         if (distance < 40)
@@ -59,13 +61,19 @@ public class Info_Interface : MonoBehaviour
     // Change the informations on the canva depending on the point of interest location
     void UpdateInfos()
     {
-        /* Select the right infos on the json file */
+        // Select the right infos on the json file
+        if(reference.WikipediaAPI.data.found == true)
+        {
+            namePoint.text = reference.WikipediaAPI.data.pages.title;
+            detailledInfos.text = reference.WikipediaAPI.data.pages.extract;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsFacing() && IsNear())
+        coordinate = reference.transform.position;
+        if (IsFacing(coordinate) && IsNear(coordinate))
         {
             UpdateInfos();
         }

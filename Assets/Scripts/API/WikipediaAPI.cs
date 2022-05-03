@@ -17,7 +17,7 @@ public class WikipediaAPI : MonoBehaviour
     string urlByGeoSearch = @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&list=geosearch&gsradius=10&gscoord=";
     
     [SerializeField]
-    public Data data;
+    private Data data;
 
     
     public async void Search(Vector2d latlon, string name)

@@ -450,7 +450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b8500a08a53764da6b2afc65403377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reference: {fileID: 6641765874182861016, guid: b1e2bc3a7567be9409c0968997e83b19, type: 3}
   camera: {fileID: 7895399636583690398}
   namePoint: {fileID: 586172496}
   geographicInfos: {fileID: 1617097252}
@@ -1614,7 +1613,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2116733712
 MonoBehaviour:
@@ -1695,7 +1694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
       propertyPath: _options.locationOptions.latitudeLongitude
-      value: 48.85877975, 2.294786
+      value: 48.11417, -1.68083
       objectReference: {fileID: 0}
     - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
       propertyPath: _vectorData._layerProperty.locationPrefabList.Array.size

@@ -1575,15 +1575,8 @@ MonoBehaviour:
   Lastlatlong:
     x: 0
     y: 0
-  Name: Tour Eiffel
+  name: 
   LastName: 
-  data:
-    found: 0
-    pages:
-      pageid: 
-      ns: 
-      title: 
-      extract: 
 --- !u!4 &2116733711
 Transform:
   m_ObjectHideFlags: 0
@@ -1677,7 +1670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
       propertyPath: _options.locationOptions.latitudeLongitude
-      value: 48.11417, -1.68083
+      value: 48.85877975, 2.294786
       objectReference: {fileID: 0}
     - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
       propertyPath: _vectorData._layerProperty.locationPrefabList.Array.size

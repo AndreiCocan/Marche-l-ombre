@@ -16,6 +16,12 @@ public class pages
 public class Data
 {
     public bool found;
-    public pages pages;
+    public List<pages> pages;
+
+    public Data()
+    {
+        found = false;
+        pages = new List<pages>();
+    }
 }
 

@@ -44,3 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: 
+  _pos:
+    x: 0
+    y: 0
+  player: {fileID: 0}
+  visitedDistance: 50
+  dis: 0
+  isVisited: 0

@@ -7,9 +7,10 @@ using System;
 
 public class Info_Interface : MonoBehaviour
 {
+    /* TODO */
+
     // Variables for the vision of the camera
-    [SerializeField]
-    private GameObject camera;
+    [SerializeField] GameObject camera;
     private Vector3 direction;
     private Vector3 coordinate;
     private Vector3 difference;
@@ -17,12 +18,9 @@ public class Info_Interface : MonoBehaviour
     private double distance;
     
     //Variables for the text zones on the interface
-    [SerializeField]
-    private TextMeshProUGUI namePoint;
-    [SerializeField]
-    private TextMeshProUGUI geographicInfos;
-    [SerializeField]
-    private TextMeshProUGUI detailledInfos;
+    [SerializeField] TextMeshProUGUI namePoint;
+    [SerializeField] TextMeshProUGUI geographicInfos;
+    [SerializeField] TextMeshProUGUI detailledInfos;
 
     // Detect if the user is looking at the point of interest
     private bool IsFacing()
@@ -49,8 +47,7 @@ public class Info_Interface : MonoBehaviour
         if (distance < 40)
         {
             return true;
-        }
-        else
+        } else
         {
             return false;
         }

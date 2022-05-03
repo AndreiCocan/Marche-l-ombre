@@ -69,7 +69,8 @@ public class GeoGetter : MonoBehaviour, IFeaturePropertySettable
 		dis = (float)Vector3.Distance(player.transform.position, parent.transform.position);
         if (dis <= visitedDistance && isVisited==false)
         {
-			Debug.Log("Start Search");
+			Debug.Log("Start Search"+_pos);
+
 			WikipediaAPI.Search(_pos,_name);
 			isVisited = true;
         }

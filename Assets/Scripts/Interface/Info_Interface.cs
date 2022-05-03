@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using Mapbox.Utils;
 
 public class Info_Interface : MonoBehaviour
 {
@@ -54,7 +55,7 @@ public class Info_Interface : MonoBehaviour
     }
 
     // Change the informations on the canva depending on the point of interest location
-    void UpdateInfos()
+    public static void UpdateInfos(Data data)
     {
         /* Select the right infos on the json file */
     }
@@ -64,7 +65,6 @@ public class Info_Interface : MonoBehaviour
     {
         if (IsFacing() && IsNear())
         {
-            UpdateInfos();
         }
     }
 }

@@ -7,7 +7,6 @@ using Mapbox.Utils;
 
 public class WikipediaAPI : MonoBehaviour
 {
-    public Vector2d latlong= new Vector2d(0,0);
     public Vector2d Lastlatlong = new Vector2d(0, 0);
     public  string name = "";
     public string LastName = "";
@@ -15,18 +14,19 @@ public class WikipediaAPI : MonoBehaviour
     
     string urlByName= @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=";
     string urlByGeoSearch = @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&list=geosearch&gsradius=50&gscoord=";
-    
+    [SerializeField]
     private Data data;
 
     
-    public async void Search(Vector2d latlon, string name)
+    public async void Search(Vector2d latlong, string name)
     {
         data = new Data();
-        
-        this.latlong = latlon;
+
+        data.latlon.x = latlong.x;
+        data.latlon.y = latlong.y;
         this.name = name;
 
-        if (!string.Equals(this.name, LastName) && latlon.x!=Lastlatlong.x && latlon.y!=Lastlatlong.y)
+        if (!string.Equals(this.name, LastName) && latlong.x!=Lastlatlong.x && latlong.y!=Lastlatlong.y)
         {
             StartCoroutine(LoadData());
         }
@@ -35,27 +35,30 @@ public class WikipediaAPI : MonoBehaviour
 
     IEnumerator  LoadData()
     {
-        WWW wwwGeosearch = new WWW(urlByGeoSearch+ latlong.x + "|"+ latlong.y);
+        WWW wwwGeosearch = new WWW(urlByGeoSearch+data.latlon.x.ToString().Replace(',','.')+"|"+ data.latlon.y.ToString().Replace(',', '.'));
         yield return wwwGeosearch;
         if(wwwGeosearch.error==null)
         {
             string source = wwwGeosearch.text;
             string[] stringSeparators = {"pageid"};
             string[] result = source.Split(stringSeparators, StringSplitOptions.None);
+
             if(result.Length>1)
             {
                 data.found = true;
-                Lastlatlong = latlong;
+                Lastlatlong = data.latlon;
                 for (int i = 1; i < result.Length; i++) {
                     string newJson = "{\"pageid" + result[i];
                     newJson = newJson.Substring(0, newJson.Length - 3);
                     data.pages.Add(JsonUtility.FromJson<pages>(newJson));
                 }
+
            
             }
             else
             {
                 data.found = false;
+
             }
         }
 
@@ -63,8 +66,10 @@ public class WikipediaAPI : MonoBehaviour
         {
             string[] nameRes = pages.title.Split('—');
 
+
             foreach (string name in nameRes)
             {
+
                 WWW wwwExtract = new WWW(urlByName + name);
                 yield return wwwExtract;
                 if (wwwExtract.error == null)
@@ -93,7 +98,7 @@ public class WikipediaAPI : MonoBehaviour
             }
             Debug.Log(pages.title+":"+pages.extract);
         }
-        
+        Info_Interface.UpdateInfos(data);
         //yield return MicrosoftTTS.Speech(data.pages.extract);
 
     }

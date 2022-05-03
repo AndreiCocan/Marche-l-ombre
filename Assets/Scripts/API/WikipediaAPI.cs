@@ -16,8 +16,15 @@ public class WikipediaAPI : MonoBehaviour
     string urlByGeoSearch = @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&list=geosearch&gsradius=50&gscoord=";
     [SerializeField]
     private Data data;
+    public Info_Interface ifi;
 
-    
+    private void Start()
+    {
+        if (ifi == null)
+        {
+            ifi = FindObjectOfType<Info_Interface>();
+        }
+    }
     public async void Search(Vector2d latlong, string name)
     {
         data = new Data();
@@ -98,7 +105,7 @@ public class WikipediaAPI : MonoBehaviour
             }
             Debug.Log(pages.title+":"+pages.extract);
         }
-        Info_Interface.UpdateInfos(data);
+        ifi.UpdateInfos(data);
         //yield return MicrosoftTTS.Speech(data.pages.extract);
 
     }

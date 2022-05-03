@@ -17,11 +17,17 @@ public class Info_Interface : MonoBehaviour
     private Vector3 difference;
     private float vu;
     private double distance;
+    private static Dictionary<string, pages> pages;
     
     //Variables for the text zones on the interface
     [SerializeField] TextMeshProUGUI namePoint;
     [SerializeField] TextMeshProUGUI geographicInfos;
     [SerializeField] TextMeshProUGUI detailledInfos;
+
+    private void Start()
+    {
+        pages = new Dictionary<string, pages>();
+    }
 
     // Detect if the user is looking at the point of interest
     private bool IsFacing()
@@ -55,8 +61,18 @@ public class Info_Interface : MonoBehaviour
     }
 
     // Change the informations on the canva depending on the point of interest location
-    public static void UpdateInfos(Data data)
+    public int UpdateInfos(Data data)
     {
+        foreach (pages page in data.pages)
+        {
+            pages.Add(page.pageid, page);
+        }
+        
+        foreach(string id in pages.Keys)
+        {
+            Debug.Log(pages[id].extract);
+        }
+        return 0;
         /* Select the right infos on the json file */
     }
 

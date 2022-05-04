@@ -1539,6 +1539,72 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
+--- !u!1 &2116733709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2116733711}
+  - component: {fileID: 2116733710}
+  - component: {fileID: 2116733712}
+  m_Layer: 0
+  m_Name: APIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2116733710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116733709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d75f1cb284c0c4aa017090afe1db02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  latlong:
+    x: 0
+    y: 0
+  Lastlatlong:
+    x: 0
+    y: 0
+  name: 
+  LastName: 
+--- !u!4 &2116733711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116733709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.75, z: 1.5050001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2116733712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116733709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ab9b5d7f8290547ac44fbdcc7cfe1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textToSay: Hello
+  voice: 1
 --- !u!1001 &340062246394589509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1599,13 +1665,49 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
+      propertyPath: _options.scalingOptions.unityTileSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
       propertyPath: _options.locationOptions.latitudeLongitude
-      value: 48.11417, -1.68083
+      value: 48.85877975, 2.294786
+      objectReference: {fileID: 0}
+    - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
+      propertyPath: _vectorData._layerProperty.locationPrefabList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
+      propertyPath: _vectorData._layerProperty.locationPrefabList.Array.data[0].density
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
+      propertyPath: _vectorData._layerProperty.locationPrefabList.Array.data[0].categories
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
+      propertyPath: _vectorData._layerProperty.locationPrefabList.Array.data[0].presetFeatureType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
+      propertyPath: _vectorData._layerProperty.locationPrefabList.Array.data[0].coreOptions.isActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
       propertyPath: _options.extentOptions.defaultExtents.rangeAroundTransformOptions.targetTransform
       value: 
       objectReference: {fileID: 878056089}
+    - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
+      propertyPath: _vectorData._layerProperty.locationPrefabList.Array.data[0].coreOptions.sublayerName
+      value: New Location
+      objectReference: {fileID: 0}
+    - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
+      propertyPath: _vectorData._layerProperty.locationPrefabList.Array.data[0].coreOptions.snapToTerrain
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
+      propertyPath: _vectorData._layerProperty.locationPrefabList.Array.data[0].spawnPrefabOptions.prefab
+      value: 
+      objectReference: {fileID: 4151382114013514823, guid: b1e2bc3a7567be9409c0968997e83b19, type: 3}
     - target: {fileID: 373395276974781737, guid: fc55602dd2b09a54481517ca5d0c217b, type: 3}
       propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].materialOptions.materials.Array.data[0].Materials.Array.data[0]
       value: 

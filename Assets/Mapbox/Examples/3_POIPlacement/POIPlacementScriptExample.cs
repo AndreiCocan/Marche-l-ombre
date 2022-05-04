@@ -29,9 +29,9 @@
 		{
 			if (instances.Count > 0)
 			{
-				Debug.Log(instances[0].name);
-			}
+                Debug.Log(instances[0].name + " " + transform.position.x + " " + transform.position.y);
+            }
 		}
-
+		
 	}
 }

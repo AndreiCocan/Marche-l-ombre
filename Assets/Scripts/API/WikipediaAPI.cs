@@ -106,7 +106,7 @@ public class WikipediaAPI : MonoBehaviour
             Debug.Log(pages.title+":"+pages.extract);
         }
         ifi.UpdateInfos(data);
-        //yield return MicrosoftTTS.Speech(data.pages.extract);
+        //yield return MicrosoftTTS.Speech(data.pages[0].extract);
 
     }
 }

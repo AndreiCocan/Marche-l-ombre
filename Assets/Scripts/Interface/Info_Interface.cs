@@ -31,10 +31,11 @@ public class Info_Interface : MonoBehaviour
     {
         pages = new Dictionary<string, pages>();
         _camera = FindObjectOfType<Camera>();
+        /*
         namePoint = (TextMeshProUGUI)FindObjectsOfType<TextMeshProUGUI>().GetValue(0);
         geographicInfos = (TextMeshProUGUI)FindObjectsOfType<TextMeshProUGUI>().GetValue(1);
         detailledInfos = (TextMeshProUGUI)FindObjectsOfType<TextMeshProUGUI>().GetValue(2);
-
+        */
         cornerTopRight = new Vector2(-265, 94);
         cornerBottomLeft = new Vector2(265, -97);
     }
@@ -77,13 +78,14 @@ public class Info_Interface : MonoBehaviour
         {
             if(!pages.ContainsKey(page.pageid)) pages.Add(page.pageid, page);
         }
-
+        /*
         foreach (string id in pages.Keys)
         {
             Button b = CreateButton(info_button, choice_buttons, cornerTopRight, cornerBottomLeft);
             b.GetComponent<TextMeshProUGUI>().text = pages[id].title;
             b.onClick.AddListener(delegate { ShowInfosOnClick(id); });
         }
+        */
         return 0;
     }
 

@@ -21,11 +21,15 @@ public class Interface : MonoBehaviour
     {
         var RightHandDevices = new List<UnityEngine.XR.InputDevice>();
         UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.RightHand, RightHandDevices);
-        UnityEngine.XR.InputDevice device = RightHandDevices[0];
-        bool triggerValue;
-        if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)
+        
+        if (RightHandDevices.Count > 0)
         {
-            Debug.Log("Trigger button is pressed.");
+            UnityEngine.XR.InputDevice device = RightHandDevices[0];
+            bool triggerValue;
+            if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)
+            {
+                Debug.Log("Trigger button is pressed.");
+            }
         }
     }
 

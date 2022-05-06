@@ -11,10 +11,9 @@ public class ScrollerCell : MonoBehaviour, ICell
     //UI
     public Text title;
     
-    [SerializeField]
-    private GameObject Infointerface;
-    [SerializeField]
-    private GameObject Scrollerinterface;
+
+    private GameObject Interface;
+
 
     //Model
     private pages _page;
@@ -24,6 +23,7 @@ public class ScrollerCell : MonoBehaviour, ICell
     {
         //Can also be done in the inspector
         GetComponent<Button>().onClick.AddListener(ButtonListener);
+        Interface = GameObject.FindWithTag("Interface");
     }
 
     //This is called from the SetCell method in DataSource
@@ -38,10 +38,19 @@ public class ScrollerCell : MonoBehaviour, ICell
     private void ButtonListener()
     {
         Debug.Log("Index : " + _cellIndex + ", Name : " + _page.title );
-        Infointerface.GetComponent<Interface_Info>().ConfigureInterface(_page);
-        Scrollerinterface.SetActive(false);
-        Infointerface.SetActive(true);
-        
+        foreach (Transform child in Interface.transform)
+        {
+            if (string.Equals(child.tag, "InfoCanvas"))
+            {
+                child.gameObject.SetActive(true);
+                child.gameObject.GetComponent<InfoCanvas>().ConfigureCanvas(_page);
+
+            }
+            else if (string.Equals(child.tag, "ScrollerCanvas"))
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
     }
 }
 

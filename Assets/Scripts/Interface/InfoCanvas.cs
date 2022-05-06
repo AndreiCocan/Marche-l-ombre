@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Interface_Info : MonoBehaviour
+public class InfoCanvas : MonoBehaviour
 {
     //UI
-    public Text title;
-    public Text extract;
-    public Text latlon;
+    public TMPro.TextMeshProUGUI title;
+    public TMPro.TextMeshProUGUI extract;
+    public TMPro.TextMeshProUGUI latlon;
 
+    [SerializeField]
+    private GameObject Audioguid_button;
 
     //Model
     private pages _page;
 
     //This is called from the SetCell method in DataSource
-    public void ConfigureInterface(pages page)
+    public void ConfigureCanvas(pages page)
     {
         _page = page;
         title.text = page.title;
         extract.text = page.extract;
         latlon.text = page.lat + " , " + page.lon;
+        Audioguid_button.GetComponent<AudioguideButton>().ConfigureCell(page);
     }
 }

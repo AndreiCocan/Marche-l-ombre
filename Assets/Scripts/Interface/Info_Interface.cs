@@ -72,6 +72,8 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
         return 0;
     }
 
+    
+
     // Update is called once per frame
     void Update()
     {

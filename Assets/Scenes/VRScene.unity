@@ -1920,6 +1920,7 @@ GameObject:
   - component: {fileID: 2116733711}
   - component: {fileID: 2116733710}
   - component: {fileID: 2116733712}
+  - component: {fileID: 2116733713}
   m_Layer: 0
   m_Name: APIManager
   m_TagString: Untagged
@@ -1944,12 +1945,6 @@ MonoBehaviour:
     y: 0
   name: 
   LastName: 
-  data:
-    found: 0
-    pages: []
-    latlon:
-      x: 0
-      y: 0
   ifi: {fileID: 0}
 --- !u!4 &2116733711
 Transform:
@@ -1979,6 +1974,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToSay: Hello
   voice: 1
+--- !u!114 &2116733713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116733709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94785b44b789b744daf7ea9799f7e2ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _map: {fileID: 0}
+  _PoiPrefab: {fileID: 6388338627577309062, guid: b0efbad03965b4d4d8201378103916cf, type: 3}
+  _spawnScale: 100
 --- !u!1001 &340062246394589509
 PrefabInstance:
   m_ObjectHideFlags: 0

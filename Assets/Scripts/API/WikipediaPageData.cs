@@ -11,6 +11,15 @@ public class pages
     public string pageid, ns;
     public string title, extract, lat, lon;
 
+    public bool equals(object o)
+    {
+        if (o.GetType() == typeof(pages))
+        {
+            return pageid==((pages)o).pageid;
+
+        }
+        return false;
+    }
 }
 
 

@@ -4,8 +4,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using PolyAndCode.UI;
 
-public class Info_Interface : MonoBehaviour
+public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
 {
     // Variables for the vision of the camera
     private Camera _camera;
@@ -25,11 +26,13 @@ public class Info_Interface : MonoBehaviour
     private Vector2 cornerTopRight;
     private Vector2 cornerBottomLeft;
 
-    private static Dictionary<string, pages> pages;
+    [SerializeField]
+    RecyclableScrollRect _recyclableScrollRect;
+    private static List<pages> pages;
 
     private void Start()
     {
-        pages = new Dictionary<string, pages>();
+        pages = new List<pages>();
         _camera = FindObjectOfType<Camera>();
         /*
         namePoint = (TextMeshProUGUI)FindObjectsOfType<TextMeshProUGUI>().GetValue(0);
@@ -71,13 +74,17 @@ public class Info_Interface : MonoBehaviour
         }
     }
 
+    
     // Change the informations on the canva depending on the point of interest location
     public int UpdateInfos(Data data)
     {
         foreach (pages page in data.pages)
         {
-            if(!pages.ContainsKey(page.pageid)) pages.Add(page.pageid, page);
+            if (!pages.Contains(page)) pages.Add(page);
         }
+
+        _recyclableScrollRect.ReloadData(this);
+        
         /*
         foreach (string id in pages.Keys)
         {
@@ -89,12 +96,25 @@ public class Info_Interface : MonoBehaviour
         return 0;
     }
 
+    private pages findPage(string id)
+    {
+        foreach (pages page in pages)
+        {
+            if (page.pageid == id) return page;
+        }
+        return null;
+    }
+
     public void ShowInfosOnClick(string id)
     {
-        namePoint.text = pages[id].title;
-        geographicInfos.text = "latitude : " + pages[id].lat + " | longitude : " + pages[id].lon;
-        detailledInfos.text = pages[id].extract;
-        info_interface.gameObject.SetActive(true);
+        pages page = findPage(id);
+        if (page != null)
+        {
+            namePoint.text = page.title;
+            geographicInfos.text = "latitude : " + page.lat + " | longitude : " + page.lon;
+            detailledInfos.text = page.extract;
+            info_interface.gameObject.SetActive(true);
+        }
     }
 
     private static Button CreateButton(Button buttonPrefab, Canvas canvas, Vector2 cornerTopRight, Vector2 cornerBottomLeft)
@@ -117,4 +137,27 @@ public class Info_Interface : MonoBehaviour
            // UpdateInfos();
         }
     }
+
+    #region DATA-SOURCE
+
+    /// <summary>
+    /// Data source method. return the list length.
+    /// </summary>
+    public int GetItemCount()
+    {
+        return pages.Count;
+    }
+
+    /// <summary>
+    /// Data source method. Called for a cell every time it is recycled.
+    /// Implement this method to do the necessary cell configuration.
+    /// </summary>
+    public void SetCell(ICell cell, int index)
+    {
+        //Casting to the implemented Cell
+        var item = cell as ScrollerCell;
+        item.ConfigureCell(pages[index], index);
+    }
+
+    #endregion
 }

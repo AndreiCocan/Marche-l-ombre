@@ -14,7 +14,7 @@ public class WikipediaAPI : MonoBehaviour
     
     string urlByName= @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=";
     string urlByGeoSearch = @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&list=geosearch&gsradius=50&gscoord=";
-    [SerializeField]
+    
     private Data data;
     public Info_Interface ifi;
 
@@ -65,19 +65,20 @@ public class WikipediaAPI : MonoBehaviour
             else
             {
                 data.found = false;
-
+                Debug.Log("datanoutfoud");
             }
         }
 
+        if (data.found == false)
+        {
+            data = new Data();
+            data.pages.Add(new pages());
+            data.pages[0].title = name;
+        }
         foreach(pages pages in data.pages)
         {
-            string[] nameRes = pages.title.Split('—');
 
-
-            foreach (string name in nameRes)
-            {
-
-                WWW wwwExtract = new WWW(urlByName + name);
+                WWW wwwExtract = new WWW(urlByName + pages.title);
                 yield return wwwExtract;
                 if (wwwExtract.error == null)
                 {
@@ -101,13 +102,9 @@ public class WikipediaAPI : MonoBehaviour
                     }
 
                 }
-
-            }
             Debug.Log(pages.title+":"+pages.extract);
         }
         ifi.UpdateInfos(data);
-        //yield return MicrosoftTTS.Speech(data.pages[0].extract);
-
     }
 }
 

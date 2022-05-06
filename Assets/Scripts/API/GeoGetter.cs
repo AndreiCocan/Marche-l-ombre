@@ -25,7 +25,10 @@ public class GeoGetter : MonoBehaviour, IFeaturePropertySettable
     [SerializeField]
 	float visitedDistance = 20;
 
-	public float dis;
+    [SerializeField]
+    float SeeingDistance = 100;
+
+    public float dis;
 
     public bool isVisited = false;
     
@@ -69,7 +72,7 @@ public class GeoGetter : MonoBehaviour, IFeaturePropertySettable
 		dis = (float)Vector3.Distance(player.transform.position, parent.transform.position);
         if (dis <= visitedDistance && isVisited==false)
         {
-			Debug.Log("Start Search"+_pos);
+			Debug.Log("Start Search"+_name);
 
 			WikipediaAPI.Search(_pos,_name);
 			isVisited = true;
@@ -77,6 +80,12 @@ public class GeoGetter : MonoBehaviour, IFeaturePropertySettable
         if (dis > visitedDistance)
         {
             isVisited = false;
+        }
+
+
+        if(dis<=SeeingDistance && isVisited == false)
+        {
+
         }
     }
 }

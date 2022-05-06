@@ -5,6 +5,8 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using PolyAndCode.UI;
+using Mapbox.Utils;
+using System.Globalization;
 
 public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
 {
@@ -22,6 +24,7 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
 
 
     InterfaceManager InterfaceManag;
+    POIindicator poiindc;
     private static List<pages> pages;
 
     private void Start()
@@ -31,6 +34,10 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
         if (InterfaceManag == null)
         {
             InterfaceManag = FindObjectOfType<InterfaceManager>();
+        }
+        if (poiindc == null)
+        {
+            poiindc = FindObjectOfType<POIindicator>();
         }
     }
 
@@ -71,15 +78,15 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
     // Change the informations on the canva depending on the point of interest location
     public int UpdateInfos(Data data)
     {
-        if (data != null)
+        if (data != null && data.found==true)
         {
             foreach (pages page in data.pages)
             {
                 if (!pages.Contains(page)) pages.Add(page);
+                poiindc.spawnPOI(new Vector2d(Convert.ToDouble(page.lat, CultureInfo.InvariantCulture), Convert.ToDouble(page.lon, CultureInfo.InvariantCulture)));
             }
             InterfaceManag.SendHaptic(0.3f, 0.3f);
         }
-        Debug.Log("Test");
         _recyclableScrollRect.ReloadData(this);
 
         return 0;

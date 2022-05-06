@@ -540,3 +540,1075 @@ System memory in use after: 118.1 MB.
 Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3325.
 Total: 3.793689 ms (FindLiveObjects: 0.280172 ms CreateObjectMapping: 0.119004 ms MarkObjects: 3.285220 ms  DeleteObjects: 0.107908 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 1096.470418 seconds.
+  path: Assets/Scripts/API/GeoGetter.cs
+  artifactKey: Guid(108feef602f5bd948b980615a72ccf1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/API/GeoGetter.cs using Guid(108feef602f5bd948b980615a72ccf1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea515cddfc20c9b1d638ddf6590a8299') in 0.012622 seconds
+  Import took 0.020069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.027072 seconds.
+  path: Assets/Scripts/API/GeoGetter.cs
+  artifactKey: Guid(108feef602f5bd948b980615a72ccf1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/API/GeoGetter.cs using Guid(108feef602f5bd948b980615a72ccf1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea515cddfc20c9b1d638ddf6590a8299') in 0.005435 seconds
+  Import took 0.015457 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.051692 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.75 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.591 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.79 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.9 MB.
+System memory in use after: 118.1 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3329.
+Total: 4.050837 ms (FindLiveObjects: 0.275456 ms CreateObjectMapping: 0.122332 ms MarkObjects: 3.561230 ms  DeleteObjects: 0.090432 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.051921 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.58 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.578 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.04 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.9 MB.
+System memory in use after: 118.1 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3333.
+Total: 4.129063 ms (FindLiveObjects: 0.350908 ms CreateObjectMapping: 0.170877 ms MarkObjects: 3.492990 ms  DeleteObjects: 0.112623 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.051270 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.07 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.830 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.83 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.9 MB.
+System memory in use after: 118.1 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3337.
+Total: 5.441431 ms (FindLiveObjects: 0.381699 ms CreateObjectMapping: 0.132873 ms MarkObjects: 4.686077 ms  DeleteObjects: 0.239117 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.046444 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.65 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.521 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.97 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.9 MB.
+System memory in use after: 118.1 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3341.
+Total: 3.071901 ms (FindLiveObjects: 0.341199 ms CreateObjectMapping: 0.121778 ms MarkObjects: 2.515441 ms  DeleteObjects: 0.092373 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.047354 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.19 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.625 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.32 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.9 MB.
+System memory in use after: 118.1 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3345.
+Total: 3.481062 ms (FindLiveObjects: 0.314291 ms CreateObjectMapping: 0.140086 ms MarkObjects: 2.911288 ms  DeleteObjects: 0.113733 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.048176 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.49 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.509 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.50 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.9 MB.
+System memory in use after: 118.1 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3349.
+Total: 5.122701 ms (FindLiveObjects: 0.276288 ms CreateObjectMapping: 0.147576 ms MarkObjects: 4.631985 ms  DeleteObjects: 0.065466 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.049382 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.88 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.630 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.70 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.9 MB.
+System memory in use after: 118.2 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3353.
+Total: 3.279117 ms (FindLiveObjects: 0.276288 ms CreateObjectMapping: 0.123719 ms MarkObjects: 2.812812 ms  DeleteObjects: 0.064911 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.057054 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.75 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.774 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.19 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.9 MB.
+System memory in use after: 118.2 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3357.
+Total: 4.883585 ms (FindLiveObjects: 0.307357 ms CreateObjectMapping: 0.119558 ms MarkObjects: 4.367625 ms  DeleteObjects: 0.087380 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.067219 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.62 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.858 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.12 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.9 MB.
+System memory in use after: 118.2 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3361.
+Total: 4.473868 ms (FindLiveObjects: 0.309853 ms CreateObjectMapping: 0.133706 ms MarkObjects: 3.912970 ms  DeleteObjects: 0.115675 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.052131 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.69 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.503 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.69 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.0 MB.
+System memory in use after: 118.2 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3365.
+Total: 3.301864 ms (FindLiveObjects: 0.499870 ms CreateObjectMapping: 0.222195 ms MarkObjects: 2.348725 ms  DeleteObjects: 0.229963 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.049606 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.14 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.530 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.56 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.0 MB.
+System memory in use after: 118.2 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3369.
+Total: 3.859433 ms (FindLiveObjects: 0.278785 ms CreateObjectMapping: 0.120113 ms MarkObjects: 3.355401 ms  DeleteObjects: 0.103747 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.051306 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.67 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.533 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.25 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.0 MB.
+System memory in use after: 118.2 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3373.
+Total: 3.363168 ms (FindLiveObjects: 0.326220 ms CreateObjectMapping: 0.165606 ms MarkObjects: 2.805044 ms  DeleteObjects: 0.065188 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.050475 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.12 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.543 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.92 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.0 MB.
+System memory in use after: 118.2 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3377.
+Total: 3.223915 ms (FindLiveObjects: 0.275178 ms CreateObjectMapping: 0.119004 ms MarkObjects: 2.769538 ms  DeleteObjects: 0.059086 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.050868 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.72 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.486 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.46 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2902 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.0 MB.
+System memory in use after: 118.2 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3381.
+Total: 3.539593 ms (FindLiveObjects: 0.341476 ms CreateObjectMapping: 0.118449 ms MarkObjects: 2.980082 ms  DeleteObjects: 0.097644 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1955.946937 seconds.
+  path: Assets/Scripts/Direction
+  artifactKey: Guid(87130e30489d2d54396b601577975949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Direction using Guid(87130e30489d2d54396b601577975949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a3676d321832568f6c5e8ad409de8af') in 0.011103 seconds
+  Import took 0.017608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001756 seconds.
+  path: Assets/Scripts/Direction
+  artifactKey: Guid(87130e30489d2d54396b601577975949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Direction using Guid(87130e30489d2d54396b601577975949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a3676d321832568f6c5e8ad409de8af') in 0.005400 seconds
+  Import took 0.012111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.679377 seconds.
+  path: Assets/Scripts/Direction/POI indicator.cs
+  artifactKey: Guid(94785b44b789b744daf7ea9799f7e2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Direction/POI indicator.cs using Guid(94785b44b789b744daf7ea9799f7e2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e15031dc93247d693d697a4a349d9cda') in 0.021797 seconds
+  Import took 0.036778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.882158 seconds.
+  path: Assets/Scripts/Direction/SpawnOnMap.cs
+  artifactKey: Guid(dcf32ea2cc0514b569329f6b6b68f9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Direction/SpawnOnMap.cs using Guid(dcf32ea2cc0514b569329f6b6b68f9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b33e9f55f95e588076621efece6f0c28') in 0.011787 seconds
+  Import took 0.021145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.057182 seconds.
+  path: Assets/Scripts/Direction/SpawnOnMap.cs
+  artifactKey: Guid(dcf32ea2cc0514b569329f6b6b68f9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Direction/SpawnOnMap.cs using Guid(dcf32ea2cc0514b569329f6b6b68f9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b33e9f55f95e588076621efece6f0c28') in 0.006965 seconds
+  Import took 0.018078 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.054811 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 4.07 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.254 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.84 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.0 MB.
+System memory in use after: 118.2 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3386.
+Total: 3.705200 ms (FindLiveObjects: 0.441894 ms CreateObjectMapping: 0.164219 ms MarkObjects: 2.918777 ms  DeleteObjects: 0.178644 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 66.160880 seconds.
+  path: Assets/Scripts/Direction/DirectionsFactory.cs
+  artifactKey: Guid(44d601772d842a94cb5ab933dca6bd4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Direction/DirectionsFactory.cs using Guid(44d601772d842a94cb5ab933dca6bd4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a7de4db2ef8bf906515858316945791') in 0.011508 seconds
+  Import took 0.020240 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007151 seconds.
+  path: Assets/Scripts/Direction/DirectionsFactory.cs
+  artifactKey: Guid(44d601772d842a94cb5ab933dca6bd4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Direction/DirectionsFactory.cs using Guid(44d601772d842a94cb5ab933dca6bd4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a7de4db2ef8bf906515858316945791') in 0.004719 seconds
+  Import took 0.016024 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.045898 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.06 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.515 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.72 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.0 MB.
+System memory in use after: 118.3 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3390.
+Total: 2.740966 ms (FindLiveObjects: 0.348134 ms CreateObjectMapping: 0.123719 ms MarkObjects: 2.210304 ms  DeleteObjects: 0.057976 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 408.245107 seconds.
+  path: Assets/Scripts/Direction/POI indicator.cs
+  artifactKey: Guid(94785b44b789b744daf7ea9799f7e2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Direction/POI indicator.cs using Guid(94785b44b789b744daf7ea9799f7e2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '921f4a6b00f3c6add37ff77f42de96af') in 0.010537 seconds
+  Import took 0.016935 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.868103 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.64 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.625 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.27 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.0 MB.
+System memory in use after: 118.3 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3394.
+Total: 3.471353 ms (FindLiveObjects: 0.507638 ms CreateObjectMapping: 0.178644 ms MarkObjects: 2.712948 ms  DeleteObjects: 0.070736 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.049177 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.19 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.453 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.72 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.0 MB.
+System memory in use after: 118.3 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3398.
+Total: 2.713781 ms (FindLiveObjects: 0.323446 ms CreateObjectMapping: 0.158671 ms MarkObjects: 2.170359 ms  DeleteObjects: 0.060195 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 235.588730 seconds.
+  path: Assets/Scripts/Direction/POIindicator.cs
+  artifactKey: Guid(94785b44b789b744daf7ea9799f7e2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Direction/POIindicator.cs using Guid(94785b44b789b744daf7ea9799f7e2ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00cd7ef6a66fd2da86cb7fe4cedd8910') in 0.010035 seconds
+  Import took 0.016279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.935776 seconds.
+  path: Assets/Prefabs/Interface
+  artifactKey: Guid(650b888f5ecfca4439280f41a76584a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Interface using Guid(650b888f5ecfca4439280f41a76584a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '713f981e8196a5dda4fd0d319fcbb7f7') in 0.005463 seconds
+  Import took 0.012802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.061923 seconds.
+  path: Assets/Prefabs/Interface/AudioGuideButton.prefab
+  artifactKey: Guid(c7f3a4e10600d1249b738176b43ac6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Interface/AudioGuideButton.prefab using Guid(c7f3a4e10600d1249b738176b43ac6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e912057292957cf9f775adf0ba19bb42') in 0.065030 seconds
+  Import took 0.072376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Prefabs/Interface/ScrollerButton.prefab
+  artifactKey: Guid(1b31c3b6409f5b34bb09dace9d514fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Interface/ScrollerButton.prefab using Guid(1b31c3b6409f5b34bb09dace9d514fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3c2bf444a618c725fe73e006840cf0e') in 0.014454 seconds
+  Import took 0.023609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000430 seconds.
+  path: Assets/Prefabs/Interface/Info_Button.prefab
+  artifactKey: Guid(d917edc8741d3e44ea79b768a6f1f059) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Interface/Info_Button.prefab using Guid(d917edc8741d3e44ea79b768a6f1f059) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fd1431cbd2edacfa9d1f29ab5bc9bc1') in 0.093018 seconds
+  Import took 0.100097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Prefabs/Interface/BackButton.prefab
+  artifactKey: Guid(325695a22a68c554d93cf330240b6e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Interface/BackButton.prefab using Guid(325695a22a68c554d93cf330240b6e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd675edd53fe67bf0f99199470179818d') in 0.011061 seconds
+  Import took 0.017430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.892732 seconds.
+  path: Assets/Prefabs/Map/Map.prefab
+  artifactKey: Guid(fc55602dd2b09a54481517ca5d0c217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/Map.prefab using Guid(fc55602dd2b09a54481517ca5d0c217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91688a2d6f288cbadeda126b28abc9bc') in 0.050380 seconds
+  Import took 0.057124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/Prefabs/Map/WaypointMaterial.mat
+  artifactKey: Guid(acb43f85b0a56ed4f8a5e32c0429d02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/WaypointMaterial.mat using Guid(acb43f85b0a56ed4f8a5e32c0429d02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15871c6f9b66c742acf1a6ca6de14c2e') in 0.116404 seconds
+  Import took 0.123635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Prefabs/Map/Waypoint.prefab
+  artifactKey: Guid(869946844b3d9c3449b022ef2011eff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/Waypoint.prefab using Guid(869946844b3d9c3449b022ef2011eff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a4be5612dcbde0aaf41fc42f2ec8a7a') in 0.033728 seconds
+  Import took 0.041421 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Prefabs/Map/NameGetter.prefab
+  artifactKey: Guid(b1e2bc3a7567be9409c0968997e83b19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/NameGetter.prefab using Guid(b1e2bc3a7567be9409c0968997e83b19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f88c9bf65ab05a9efd41ea65f8a7c8c8') in 0.017141 seconds
+  Import took 0.027647 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.279832 seconds.
+  path: Assets/Prefabs/Map/Waypoint Variant.prefab
+  artifactKey: Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/Waypoint Variant.prefab using Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '969e7b5da25911b3b5a55aa9a59f2331') in 0.034330 seconds
+  Import took 0.041925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002069 seconds.
+  path: Assets/Prefabs/Map/Waypoint Variant.prefab
+  artifactKey: Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/Waypoint Variant.prefab using Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '969e7b5da25911b3b5a55aa9a59f2331') in 0.028850 seconds
+  Import took 0.038431 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.542178 seconds.
+  path: Assets/Prefabs/Map/POI.prefab
+  artifactKey: Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/POI.prefab using Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6229f20da33cf1cb5068f511768efb3a') in 0.047975 seconds
+  Import took 0.058042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.342061 seconds.
+  path: Assets/Prefabs/Map
+  artifactKey: Guid(ecd7cdb331782fe42b26858bbd7c6553) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map using Guid(ecd7cdb331782fe42b26858bbd7c6553) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1d6f72af8abfa217b5830f28f776a64') in 0.004610 seconds
+  Import took 0.011383 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.026609 seconds.
+  path: Assets/Prefabs/Map/New Material.mat
+  artifactKey: Guid(b3e078c365ac58b439b25ec0d6ca14fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/New Material.mat using Guid(b3e078c365ac58b439b25ec0d6ca14fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b656e16012168fbcd018a14b69f1ab92') in 0.031198 seconds
+  Import took 0.037438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.612257 seconds.
+  path: Assets/Prefabs/Map/POI.prefab
+  artifactKey: Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/POI.prefab using Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d5ce6f52b78fe8baab2fed5c1d639cc') in 0.034213 seconds
+  Import took 0.046992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.642469 seconds.
+  path: Assets/Prefabs/Map/POI material.mat
+  artifactKey: Guid(b3e078c365ac58b439b25ec0d6ca14fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/POI material.mat using Guid(b3e078c365ac58b439b25ec0d6ca14fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d31357413046e317a03a95ed52739d6') in 0.024225 seconds
+  Import took 0.030812 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.053849 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.85 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.589 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.38 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.4 MB.
+System memory in use after: 121.6 MB.
+
+Unloading 128 unused Assets to reduce memory usage. Loaded Objects now: 3444.
+Total: 4.662221 ms (FindLiveObjects: 0.579484 ms CreateObjectMapping: 0.352018 ms MarkObjects: 3.618652 ms  DeleteObjects: 0.109849 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 282.072227 seconds.
+  path: Assets/Scripts/API/WikipediaPageData.cs
+  artifactKey: Guid(b9b4a8d98b630d649a98b8175423ccc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/API/WikipediaPageData.cs using Guid(b9b4a8d98b630d649a98b8175423ccc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b87f5f42b9a0e92850a13b84ed6bece') in 0.015331 seconds
+  Import took 0.022609 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.051992 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.68 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.494 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.76 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.4 MB.
+System memory in use after: 121.6 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3448.
+Total: 2.862466 ms (FindLiveObjects: 0.311240 ms CreateObjectMapping: 0.121500 ms MarkObjects: 2.377852 ms  DeleteObjects: 0.050764 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.050925 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.58 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.474 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.12 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.4 MB.
+System memory in use after: 121.6 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3452.
+Total: 4.088563 ms (FindLiveObjects: 0.312904 ms CreateObjectMapping: 0.186689 ms MarkObjects: 3.521562 ms  DeleteObjects: 0.066021 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.051780 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.69 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.553 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.62 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.4 MB.
+System memory in use after: 121.6 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3456.
+Total: 3.145134 ms (FindLiveObjects: 0.522062 ms CreateObjectMapping: 0.157562 ms MarkObjects: 2.365647 ms  DeleteObjects: 0.098199 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 465.431088 seconds.
+  path: Assets/Prefabs/Player
+  artifactKey: Guid(0f527abfedde58d49b511927e7c6bc81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player using Guid(0f527abfedde58d49b511927e7c6bc81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '751d143db316ab7588f467a6dbd98292') in 0.011668 seconds
+  Import took 0.017543 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.045850 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.57 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.468 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.26 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.4 MB.
+System memory in use after: 121.6 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3460.
+Total: 3.150682 ms (FindLiveObjects: 0.287939 ms CreateObjectMapping: 0.120391 ms MarkObjects: 2.674945 ms  DeleteObjects: 0.066298 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.051871 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.21 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.501 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.78 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.4 MB.
+System memory in use after: 121.6 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3464.
+Total: 3.032233 ms (FindLiveObjects: 0.288493 ms CreateObjectMapping: 0.125661 ms MarkObjects: 2.553722 ms  DeleteObjects: 0.062414 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.048132 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.16 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.445 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.69 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.4 MB.
+System memory in use after: 121.7 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3468.
+Total: 3.625032 ms (FindLiveObjects: 0.371435 ms CreateObjectMapping: 0.123165 ms MarkObjects: 3.062469 ms  DeleteObjects: 0.066575 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.045536 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.65 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.452 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.83 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.4 MB.
+System memory in use after: 121.7 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3472.
+Total: 3.903261 ms (FindLiveObjects: 0.295983 ms CreateObjectMapping: 0.132041 ms MarkObjects: 3.378703 ms  DeleteObjects: 0.095147 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.048176 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.22 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.485 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.95 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.4 MB.
+System memory in use after: 121.7 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3476.
+Total: 2.990901 ms (FindLiveObjects: 0.300144 ms CreateObjectMapping: 0.120668 ms MarkObjects: 2.497965 ms  DeleteObjects: 0.071014 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.052563 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 3.43 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.606 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.10 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.5 MB.
+System memory in use after: 121.7 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3480.
+Total: 3.889669 ms (FindLiveObjects: 0.424973 ms CreateObjectMapping: 0.144802 ms MarkObjects: 3.225579 ms  DeleteObjects: 0.092651 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.045695 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.37 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.500 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.92 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.5 MB.
+System memory in use after: 121.7 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3484.
+Total: 4.371509 ms (FindLiveObjects: 0.362559 ms CreateObjectMapping: 0.138976 ms MarkObjects: 3.801179 ms  DeleteObjects: 0.067130 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 476.337446 seconds.
+  path: Assets/Prefabs/Map/POI.prefab
+  artifactKey: Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/POI.prefab using Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '857c98ea25a020dba180102f72e40391') in 0.089428 seconds
+  Import took 0.098506 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.091221 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.73 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.522 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.61 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.5 MB.
+System memory in use after: 121.7 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3489.
+Total: 3.172041 ms (FindLiveObjects: 0.285997 ms CreateObjectMapping: 0.130099 ms MarkObjects: 2.693808 ms  DeleteObjects: 0.060473 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.363026 seconds.
+  path: Assets/Prefabs/Map/POI.prefab
+  artifactKey: Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/POI.prefab using Guid(fc4392d17771aaf45ab11c3e01a86c63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30ee862de4830c202015d04fc902279d') in 0.087419 seconds
+  Import took 0.096725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 127.139313 seconds.
+  path: Assets/Prefabs/Map/Waypoint 1.prefab
+  artifactKey: Guid(b0efbad03965b4d4d8201378103916cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/Waypoint 1.prefab using Guid(b0efbad03965b4d4d8201378103916cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96196089329269568a7ff82e1a810b62') in 0.024724 seconds
+  Import took 0.035597 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001697 seconds.
+  path: Assets/Prefabs/Map/Waypoint 1.prefab
+  artifactKey: Guid(b0efbad03965b4d4d8201378103916cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/Waypoint 1.prefab using Guid(b0efbad03965b4d4d8201378103916cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96196089329269568a7ff82e1a810b62') in 0.033601 seconds
+  Import took 0.041503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.541217 seconds.
+  path: Assets/Prefabs/Map/POI.prefab
+  artifactKey: Guid(b0efbad03965b4d4d8201378103916cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/POI.prefab using Guid(b0efbad03965b4d4d8201378103916cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '768e39e04003d4da3c7db3e9491db48e') in 0.026934 seconds
+  Import took 0.035677 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.747504 seconds.
+  path: Assets/Prefabs/Map/POI.prefab
+  artifactKey: Guid(b0efbad03965b4d4d8201378103916cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map/POI.prefab using Guid(b0efbad03965b4d4d8201378103916cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eb9b54b97dda0ff45784eae121beec3') in 0.032384 seconds
+  Import took 0.039482 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.048074 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.81 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.579 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.58 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.5 MB.
+System memory in use after: 121.7 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3494.
+Total: 3.483836 ms (FindLiveObjects: 0.398066 ms CreateObjectMapping: 0.167548 ms MarkObjects: 2.848318 ms  DeleteObjects: 0.068795 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.052864 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 7.20 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.647 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.24 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.5 MB.
+System memory in use after: 121.7 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3498.
+Total: 4.852239 ms (FindLiveObjects: 0.556460 ms CreateObjectMapping: 0.166716 ms MarkObjects: 4.029755 ms  DeleteObjects: 0.097089 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.054057 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\acocan\Documents\GitHub\Marche-l-ombre\Library\PackageCache\com.unity.collab-proxy@1.15.15\Lib\Editor\PlasticSCM\unityplastic.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.65 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.558 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.57 ms, found 14 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2903 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.5 MB.
+System memory in use after: 121.7 MB.
+
+Unloading 127 unused Assets to reduce memory usage. Loaded Objects now: 3502.
+Total: 4.537392 ms (FindLiveObjects: 0.485168 ms CreateObjectMapping: 0.190850 ms MarkObjects: 3.791748 ms  DeleteObjects: 0.068240 ms)
+

@@ -10,7 +10,11 @@ public class ScrollerCell : MonoBehaviour, ICell
 {
     //UI
     public Text title;
-
+    
+    [SerializeField]
+    private GameObject Infointerface;
+    [SerializeField]
+    private GameObject Scrollerinterface;
 
     //Model
     private pages _page;
@@ -34,6 +38,10 @@ public class ScrollerCell : MonoBehaviour, ICell
     private void ButtonListener()
     {
         Debug.Log("Index : " + _cellIndex + ", Name : " + _page.title );
+        Infointerface.GetComponent<Interface_Info>().ConfigureInterface(_page);
+        Scrollerinterface.SetActive(false);
+        Infointerface.SetActive(true);
+        
     }
 }
 

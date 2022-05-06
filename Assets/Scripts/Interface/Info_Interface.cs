@@ -16,15 +16,6 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
     private float vu;
     private double distance;
     
-    //Variables for the interface
-    private TextMeshProUGUI namePoint;
-    private TextMeshProUGUI geographicInfos;
-    private TextMeshProUGUI detailledInfos;
-    public Button info_button;
-    public Canvas choice_buttons;
-    public Canvas info_interface;
-    private Vector2 cornerTopRight;
-    private Vector2 cornerBottomLeft;
 
     [SerializeField]
     RecyclableScrollRect _recyclableScrollRect;
@@ -34,13 +25,6 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
     {
         pages = new List<pages>();
         _camera = FindObjectOfType<Camera>();
-        /*
-        namePoint = (TextMeshProUGUI)FindObjectsOfType<TextMeshProUGUI>().GetValue(0);
-        geographicInfos = (TextMeshProUGUI)FindObjectsOfType<TextMeshProUGUI>().GetValue(1);
-        detailledInfos = (TextMeshProUGUI)FindObjectsOfType<TextMeshProUGUI>().GetValue(2);
-        */
-        cornerTopRight = new Vector2(-265, 94);
-        cornerBottomLeft = new Vector2(265, -97);
     }
 
     // Detect if the user is looking at the point of interest
@@ -85,48 +69,7 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
 
         _recyclableScrollRect.ReloadData(this);
         
-        /*
-        foreach (string id in pages.Keys)
-        {
-            Button b = CreateButton(info_button, choice_buttons, cornerTopRight, cornerBottomLeft);
-            b.GetComponent<TextMeshProUGUI>().text = pages[id].title;
-            b.onClick.AddListener(delegate { ShowInfosOnClick(id); });
-        }
-        */
         return 0;
-    }
-
-    private pages findPage(string id)
-    {
-        foreach (pages page in pages)
-        {
-            if (page.pageid == id) return page;
-        }
-        return null;
-    }
-
-    public void ShowInfosOnClick(string id)
-    {
-        pages page = findPage(id);
-        if (page != null)
-        {
-            namePoint.text = page.title;
-            geographicInfos.text = "latitude : " + page.lat + " | longitude : " + page.lon;
-            detailledInfos.text = page.extract;
-            info_interface.gameObject.SetActive(true);
-        }
-    }
-
-    private static Button CreateButton(Button buttonPrefab, Canvas canvas, Vector2 cornerTopRight, Vector2 cornerBottomLeft)
-    {
-        var button = Instantiate(buttonPrefab, Vector3.zero, Quaternion.identity);
-        var rectTransform = button.GetComponent<RectTransform>();
-        rectTransform.SetParent(canvas.transform);
-        rectTransform.anchorMax = cornerTopRight;
-        rectTransform.anchorMin = cornerBottomLeft;
-        rectTransform.offsetMax = Vector2.zero;
-        rectTransform.offsetMin = Vector2.zero;
-        return button;
     }
 
     // Update is called once per frame

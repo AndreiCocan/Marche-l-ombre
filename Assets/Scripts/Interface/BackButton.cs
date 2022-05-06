@@ -25,6 +25,7 @@ public class BackButton : MonoBehaviour
             else if (string.Equals(child.tag, "ScrollerCanvas"))
             {
                 child.gameObject.SetActive(true);
+                Interface.gameObject.GetComponent<Info_Interface>().UpdateInfos(null);
             }
         }
     }

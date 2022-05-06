@@ -19,13 +19,22 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
 
     [SerializeField]
     RecyclableScrollRect _recyclableScrollRect;
+
+
+    InterfaceManager InterfaceManag;
     private static List<pages> pages;
 
     private void Start()
     {
         pages = new List<pages>();
         _camera = FindObjectOfType<Camera>();
+        if (InterfaceManag == null)
+        {
+            InterfaceManag = FindObjectOfType<InterfaceManager>();
+        }
     }
+
+
 
     // Detect if the user is looking at the point of interest
     private bool IsFacing()
@@ -62,13 +71,17 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
     // Change the informations on the canva depending on the point of interest location
     public int UpdateInfos(Data data)
     {
-        foreach (pages page in data.pages)
+        if (data != null)
         {
-            if (!pages.Contains(page)) pages.Add(page);
+            foreach (pages page in data.pages)
+            {
+                if (!pages.Contains(page)) pages.Add(page);
+            }
+            InterfaceManag.SendHaptic(0.3f, 0.3f);
         }
-
+        Debug.Log("Test");
         _recyclableScrollRect.ReloadData(this);
-        
+
         return 0;
     }
 

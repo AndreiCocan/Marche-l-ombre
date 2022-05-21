@@ -7,6 +7,7 @@ using System;
 using ScrollerList.UI;
 using Mapbox.Utils;
 using System.Globalization;
+using System.Linq;
 
 public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
 {
@@ -23,6 +24,7 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
     RecyclableScrollRect _recyclableScrollRect;
 
 
+
     InterfaceManager InterfaceManag;
     POIindicator poiindc;
     private static List<pages> pages;
@@ -30,7 +32,9 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
     private void Start()
     {
         pages = new List<pages>();
+        
         _camera = FindObjectOfType<Camera>();
+        
         if (InterfaceManag == null)
         {
             InterfaceManag = FindObjectOfType<InterfaceManager>();
@@ -39,7 +43,9 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
         {
             poiindc = FindObjectOfType<POIindicator>();
         }
+        
     }
+
 
 
 
@@ -75,14 +81,15 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
     }
 
     
-    // Change the informations on the canva depending on the point of interest location
+    // Change the informations on the canvas depending on the point of interest location
     public int UpdateInfos(Data data)
     {
+        PageComparer pagec = new PageComparer();
         if (data != null && data.found==true)
         {
             foreach (pages page in data.pages)
             {
-                if (!pages.Contains(page)) pages.Add(page);
+                if (!pages.Contains(page,pagec)) pages.Add(page);
                 poiindc.spawnPOI(new Vector2d(Convert.ToDouble(page.lat, CultureInfo.InvariantCulture), Convert.ToDouble(page.lon, CultureInfo.InvariantCulture)));
             }
             InterfaceManag.SendHaptic(0.3f, 0.3f);
@@ -105,18 +112,17 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
 
     #region DATA-SOURCE
 
-    /// <summary>
-    /// Data source method. return the list length.
-    /// </summary>
+
+    // Data source method. return the list length.
     public int GetItemCount()
     {
         return pages.Count;
     }
 
-    /// <summary>
-    /// Data source method. Called for a cell every time it is recycled.
-    /// Implement this method to do the necessary cell configuration.
-    /// </summary>
+
+    // Data source method. Called for a cell every time it is recycled.
+    // Implement this method to do the necessary cell configuration.
+
     public void SetCell(ICell cell, int index)
     {
         //Casting to the implemented Cell

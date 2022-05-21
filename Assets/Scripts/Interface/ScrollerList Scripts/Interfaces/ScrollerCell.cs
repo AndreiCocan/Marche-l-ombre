@@ -10,7 +10,7 @@ public class ScrollerCell : MonoBehaviour, ICell
     
 
     private GameObject Interface;
-
+    private InterfaceManager InterfaceManag;
 
     //Model
     private pages _page;
@@ -20,7 +20,11 @@ public class ScrollerCell : MonoBehaviour, ICell
     {
         //Can also be done in the inspector
         GetComponent<Button>().onClick.AddListener(ButtonListener);
-        Interface = GameObject.FindWithTag("Interface");
+        
+        if (InterfaceManag == null)
+        {
+            InterfaceManag = FindObjectOfType<InterfaceManager>();
+        }
     }
 
     //This is called from the SetCell method in DataSource
@@ -28,26 +32,15 @@ public class ScrollerCell : MonoBehaviour, ICell
     {
         _cellIndex = cellIndex;
         _page = page;
-        title.text = page.title;
+        title.text = page.title+page.pageid;
     }
-
+    
 
     private void ButtonListener()
     {
         Debug.Log("Index : " + _cellIndex + ", Name : " + _page.title );
-        foreach (Transform child in Interface.transform)
-        {
-            if (string.Equals(child.tag, "InfoCanvas"))
-            {
-                child.gameObject.SetActive(true);
-                child.gameObject.GetComponent<InfoCanvas>().ConfigureCanvas(_page);
-
-            }
-            else if (string.Equals(child.tag, "ScrollerCanvas"))
-            {
-                child.gameObject.SetActive(false);
-            }
-        }
+        InterfaceManag.ConfigureInfoCanvas(_page);
+        InterfaceManag.InfoCanvasActive();
     }
 }
 

@@ -11,15 +11,60 @@ public class InterfaceManager : MonoBehaviour
 
     private GameObject Interface;
     private bool isPressed = false;
+    private bool open = true;
+
+    [SerializeField]
+    GameObject InfoCanvas;
+    [SerializeField]
+    GameObject ScrollerCanvas;
+
+    //To know wich canvas to open when all canvas are closed
+    private bool _isInfoCanvasActive;
 
     private UnityEngine.XR.InputDevice device;
 
     private void Start()
     {
        Interface = GameObject.FindWithTag("Interface");
-
+       ScrollerCanvasActive();
     }
 
+
+    public void InfoCanvasActive()
+    {
+        InfoCanvas.GetComponent<Canvas>().enabled = true;
+        ScrollerCanvas.GetComponent<Canvas>().enabled = false;
+        _isInfoCanvasActive = true;
+    }
+    public void ScrollerCanvasActive()
+    {
+        InfoCanvas.GetComponent<Canvas>().enabled = false;
+        ScrollerCanvas.GetComponent<Canvas>().enabled = true;
+        _isInfoCanvasActive = false;
+    }
+
+    public void AllCanvasEnable()
+    {
+        if (_isInfoCanvasActive == true)
+        {
+            InfoCanvas.GetComponent<Canvas>().enabled = true;
+        }
+        else
+        {
+            ScrollerCanvas.GetComponent<Canvas>().enabled = true;
+        }
+    }
+
+    public void AllCanvasDisable()
+    {
+        InfoCanvas.GetComponent<Canvas>().enabled = false;
+        ScrollerCanvas.GetComponent<Canvas>().enabled = false;
+    }
+
+    public void ConfigureInfoCanvas(pages _page)
+    {
+        InfoCanvas.GetComponent<InfoCanvas>().ConfigureCanvas(_page);
+    } 
 
     // Show the interface when the trigger is pressed
     private void Affichage_Interface_On_Trigger()
@@ -30,16 +75,19 @@ public class InterfaceManager : MonoBehaviour
         {
            isPressed = true;
            Debug.Log("Trigger button is pressed.");
-          if (Interface.activeSelf == true)
-          {
-              Interface.SetActive(false);
-          }
-          else
-          {
-              
-              Interface.SetActive(true);
+            
+            if (open == true)
+            {
+                AllCanvasDisable();
+                open = false;
+            }
+            else
+            {
+
+                AllCanvasEnable();
                 Interface.GetComponent<Info_Interface>().UpdateInfos(null);
-          }
+                open = true;
+            }
                 
         }
        if(device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && !triggerValue)

@@ -48,7 +48,7 @@ namespace ScrollerList.UI
         }
 
 
-        // Corotuine for initiazation.
+        // Coroutine for initiazation.
         // Using coroutine for init because few UI stuff requires a frame to update
 
         public override IEnumerator InitCoroutine(System.Action onInitialized)
@@ -126,7 +126,11 @@ namespace ScrollerList.UI
 
             //Get the required pool coverage and mininum size for the Cell pool
             float requriedCoverage = MinPoolCoverage * Viewport.rect.height;
-            int minPoolSize = Math.Min(MinPoolSize, DataSource.GetItemCount());
+            int minPoolSize;
+            
+    
+                minPoolSize = Math.Min(MinPoolSize, DataSource.GetItemCount());
+
 
             //create cells untill the Pool area is covered and pool size is the minimum required
             while ((poolSize < minPoolSize || currentPoolCoverage < requriedCoverage) && poolSize < DataSource.GetItemCount())

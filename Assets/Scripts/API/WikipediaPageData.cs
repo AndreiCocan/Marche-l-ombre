@@ -22,8 +22,19 @@ public class pages
     }
 }
 
+public class PageComparer : IEqualityComparer<pages>
+{
+    public bool Equals(pages x, pages y)
+    {
+        return x.pageid == y.pageid;
+    }
+    public int GetHashCode(pages obj)
+    {
+        return obj.pageid.GetHashCode();
+    }
+}
 
-[System.Serializable]
+    [System.Serializable]
 public class Data
 {
     public bool found;

@@ -6,8 +6,7 @@ using ScrollerList.UI;
 public class ScrollerCell : MonoBehaviour, ICell
 {
     //UI
-    public Text title;
-    
+    public TMPro.TextMeshProUGUI title;
 
     private GameObject Interface;
     private InterfaceManager InterfaceManag;
@@ -15,9 +14,14 @@ public class ScrollerCell : MonoBehaviour, ICell
     //Model
     private pages _page;
     private int _cellIndex;
-
+    
+    private void Awake()
+    {
+        title = transform.GetChild(0).GetComponent<TMPro.TextMeshProUGUI>();
+    }
     private void Start()
     {
+
         //Can also be done in the inspector
         GetComponent<Button>().onClick.AddListener(ButtonListener);
         
@@ -32,7 +36,7 @@ public class ScrollerCell : MonoBehaviour, ICell
     {
         _cellIndex = cellIndex;
         _page = page;
-        title.text = page.title+page.pageid;
+        title.text = page.title;
     }
     
 

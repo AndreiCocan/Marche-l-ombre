@@ -29,6 +29,12 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
     POIindicator poiindc;
     private static List<pages> pages;
 
+    //Recyclable scroll rect's data source must be assigned in Awake.
+    private void Awake()
+    {
+        _recyclableScrollRect.DataSource = this;
+    }
+    
     private void Start()
     {
         pages = new List<pages>();

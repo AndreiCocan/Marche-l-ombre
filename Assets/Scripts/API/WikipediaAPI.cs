@@ -27,14 +27,15 @@ public class WikipediaAPI : MonoBehaviour
     }
     public async void Search(Vector2d latlong, string name)
     {
-        data = new Data();
 
-        data.latlon.x = latlong.x;
-        data.latlon.y = latlong.y;
         this.name = name;
 
         if (!string.Equals(this.name, LastName) && latlong.x!=Lastlatlong.x && latlong.y!=Lastlatlong.y)
         {
+            data = new Data();
+
+            data.latlon.x = latlong.x;
+            data.latlon.y = latlong.y;
             StartCoroutine(LoadData());
         }
     }

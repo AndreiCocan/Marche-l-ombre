@@ -95,8 +95,11 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
         {
             foreach (pages page in data.pages)
             {
-                if (!pages.Contains(page,pagec)) pages.Add(page);
-                poiindc.spawnPOI(new Vector2d(Convert.ToDouble(page.lat, CultureInfo.InvariantCulture), Convert.ToDouble(page.lon, CultureInfo.InvariantCulture)));
+                if (!pages.Contains(page, pagec))
+                {
+                    pages.Add(page);
+                    poiindc.spawnPOI(new Vector2d(Convert.ToDouble(page.lat, CultureInfo.InvariantCulture), Convert.ToDouble(page.lon, CultureInfo.InvariantCulture)));
+                }
             }
             InterfaceManag.SendHaptic(0.3f, 0.3f);
         }

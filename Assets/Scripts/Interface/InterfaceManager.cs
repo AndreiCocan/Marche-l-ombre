@@ -10,8 +10,13 @@ public class InterfaceManager : MonoBehaviour
 {
 
     private GameObject Interface;
-    private bool isPressed = false;
-    private bool open = true;
+    private GameObject Minimap;
+
+    private bool isPressedInterface = false;
+    private bool openInterface = true;
+
+    private bool isPressedMinimap = false;
+    private bool openMinimap = false;
 
     [SerializeField]
     GameObject InfoCanvas;
@@ -26,8 +31,9 @@ public class InterfaceManager : MonoBehaviour
 
     private void Start()
     {
-       Interface = GameObject.FindWithTag("Interface");
-        
+        Interface = GameObject.FindWithTag("Interface");
+        Minimap = GameObject.FindWithTag("Minimap");
+
         InfoCanvas.GetComponent<Canvas>().enabled = false;
         ScrollerCanvas.GetComponent<Canvas>().enabled = true;
         _isInfoCanvasActive = false;
@@ -84,16 +90,16 @@ public class InterfaceManager : MonoBehaviour
     {
 
         bool triggerValue;
-        if (((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)|| Input.GetKeyDown(KeyCode.T)) && !isPressed)
+        if (((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)|| Input.GetKey(KeyCode.T)) && !isPressedInterface)
         {
-           isPressed = true;
+            isPressedInterface = true;
            Debug.Log("Trigger button is pressed.");
             
-            if (open == true)
+            if (openInterface == true)
             {
                 if (Interface.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("InterfaceOpened"))
                 {
-                    open = false;
+                    openInterface = false;
                 }                
                 Interface.GetComponent<Animator>().SetTrigger("Close");
                 
@@ -106,7 +112,7 @@ public class InterfaceManager : MonoBehaviour
                 if (Interface.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("InterfaceClosed"))
                 {
 
-                    open = true;
+                    openInterface = true;
                 }                
                 Interface.GetComponent<Animator>().SetTrigger("Open");
                 
@@ -117,11 +123,49 @@ public class InterfaceManager : MonoBehaviour
             }
                 
         }
-       if((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && !triggerValue) || !Input.GetKeyDown(KeyCode.T))
+       if((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && !triggerValue) || !Input.GetKey(KeyCode.T))
        {
-             isPressed = false;
+            isPressedInterface = false;
        }
         
+    }
+
+    void Affichage_Minimap_On_Trigger()
+    {
+        bool triggerValue;
+        if (((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.gripButton, out triggerValue) && triggerValue) || Input.GetKey(KeyCode.M)) && !isPressedMinimap)
+        {
+            isPressedMinimap = true;
+            Debug.Log("Map button is pressed.");
+
+            if (openMinimap == true)
+            {
+                if (Minimap.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("MinimapOpened"))
+                {
+                    openMinimap = false;
+                }
+                Minimap.GetComponent<Animator>().SetTrigger("Close");
+
+
+            }
+            else
+            {
+                if (Minimap.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("MinimapClosed"))
+                {
+
+                    openMinimap = true;
+                }
+                Minimap.GetComponent<Animator>().SetTrigger("Open");
+
+            }
+
+        }
+        
+        if ((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.gripButton, out triggerValue) && !triggerValue) || !Input.GetKey(KeyCode.M))
+        {
+            isPressedMinimap = false;
+        }
+
     }
 
     public bool SendHaptic(float amplitude, float duration)
@@ -144,6 +188,7 @@ public class InterfaceManager : MonoBehaviour
             device = LeftHandDevices[0];
         }
         Affichage_Interface_On_Trigger();
+        Affichage_Minimap_On_Trigger();
     }
 
 }

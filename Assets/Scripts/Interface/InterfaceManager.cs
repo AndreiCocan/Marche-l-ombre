@@ -18,6 +18,7 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField]
     GameObject ScrollerCanvas;
 
+
     //To know wich canvas to open when all canvas are closed
     private bool _isInfoCanvasActive;
 
@@ -26,7 +27,10 @@ public class InterfaceManager : MonoBehaviour
     private void Start()
     {
        Interface = GameObject.FindWithTag("Interface");
-       ScrollerCanvasActive();
+        
+        InfoCanvas.GetComponent<Canvas>().enabled = false;
+        ScrollerCanvas.GetComponent<Canvas>().enabled = true;
+        _isInfoCanvasActive = false;
     }
 
 
@@ -34,12 +38,20 @@ public class InterfaceManager : MonoBehaviour
     {
         InfoCanvas.GetComponent<Canvas>().enabled = true;
         ScrollerCanvas.GetComponent<Canvas>().enabled = false;
+
+        InfoCanvas.GetComponent<Animator>().SetTrigger("Open");
+        ScrollerCanvas.GetComponent<Animator>().SetTrigger("Open");
+        
         _isInfoCanvasActive = true;
     }
     public void ScrollerCanvasActive()
     {
         InfoCanvas.GetComponent<Canvas>().enabled = false;
         ScrollerCanvas.GetComponent<Canvas>().enabled = true;
+
+        InfoCanvas.GetComponent<Animator>().SetTrigger("Close");        
+        ScrollerCanvas.GetComponent<Animator>().SetTrigger("Close");
+        
         _isInfoCanvasActive = false;
     }
 
@@ -61,6 +73,7 @@ public class InterfaceManager : MonoBehaviour
         ScrollerCanvas.GetComponent<Canvas>().enabled = false;
     }
 
+
     public void ConfigureInfoCanvas(pages _page)
     {
         InfoCanvas.GetComponent<InfoCanvas>().ConfigureCanvas(_page);
@@ -71,26 +84,40 @@ public class InterfaceManager : MonoBehaviour
     {
 
         bool triggerValue;
-        if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue && !isPressed)
+        if (((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)|| Input.GetKeyDown(KeyCode.T)) && !isPressed)
         {
            isPressed = true;
            Debug.Log("Trigger button is pressed.");
             
             if (open == true)
             {
-                AllCanvasDisable();
-                open = false;
+                if (Interface.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("InterfaceOpened"))
+                {
+                    open = false;
+                }                
+                Interface.GetComponent<Animator>().SetTrigger("Close");
+                
+
+                //AllCanvasDisable();
+                
             }
             else
             {
+                if (Interface.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("InterfaceClosed"))
+                {
 
-                AllCanvasEnable();
+                    open = true;
+                }                
+                Interface.GetComponent<Animator>().SetTrigger("Open");
+                
+
+                //AllCanvasEnable();
                 Interface.GetComponent<Info_Interface>().UpdateInfos(null);
-                open = true;
+                
             }
                 
         }
-       if(device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && !triggerValue)
+       if((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && !triggerValue) || !Input.GetKeyDown(KeyCode.T))
        {
              isPressed = false;
        }

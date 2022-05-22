@@ -231,6 +231,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "edb151e7-c4f7-421c-a2c2-bf04b09099e5",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UI Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "Quaternion Fallback",
                     "id": "61466a56-4ee4-47b1-aa6a-4806de1de5f2",
                     "path": "QuaternionFallback",
@@ -633,6 +644,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
+                    "action": "UI Press Value",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a91fdafd-4807-40aa-a8af-4f7adbe72f99",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "UI Press Value",
                     "isComposite": false,
                     "isPartOfComposite": false

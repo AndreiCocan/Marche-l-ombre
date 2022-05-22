@@ -39,8 +39,8 @@ public class POIindicator : MonoBehaviour
     {
         GameObject spawnedObject= Instantiate(_PoiPrefab, transform);
         spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
-	    spawnedObject.transform.localPosition += new Vector3(0, 20, 0);
-        spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+	    spawnedObject.transform.localPosition += new Vector3(0, 600, 0);
+        spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale*0.5f, _spawnScale);
     }
 
 }

@@ -27,7 +27,8 @@ public class InterfaceManager : MonoBehaviour
     //To know wich canvas to open when all canvas are closed
     private bool _isInfoCanvasActive;
 
-    private UnityEngine.XR.InputDevice device;
+    private UnityEngine.XR.InputDevice left;
+    private UnityEngine.XR.InputDevice right;
 
     private void Start()
     {
@@ -90,7 +91,7 @@ public class InterfaceManager : MonoBehaviour
     {
 
         bool triggerValue;
-        if (((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)|| Input.GetKey(KeyCode.T)) && !isPressedInterface)
+        if ((left.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue) && !isPressedInterface)
         {
             isPressedInterface = true;
            Debug.Log("Trigger button is pressed.");
@@ -123,7 +124,7 @@ public class InterfaceManager : MonoBehaviour
             }
                 
         }
-       if((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && !triggerValue) || !Input.GetKey(KeyCode.T))
+       if(left.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && !triggerValue)
        {
             isPressedInterface = false;
        }
@@ -133,7 +134,7 @@ public class InterfaceManager : MonoBehaviour
     void Affichage_Minimap_On_Trigger()
     {
         bool triggerValue;
-        if (((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.gripButton, out triggerValue) && triggerValue) || Input.GetKey(KeyCode.M)) && !isPressedMinimap)
+        if ((right.TryGetFeatureValue(UnityEngine.XR.CommonUsages.gripButton, out triggerValue) && triggerValue) && !isPressedMinimap)
         {
             isPressedMinimap = true;
             Debug.Log("Map button is pressed.");
@@ -161,7 +162,7 @@ public class InterfaceManager : MonoBehaviour
 
         }
         
-        if ((device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.gripButton, out triggerValue) && !triggerValue) || !Input.GetKey(KeyCode.M))
+        if (right.TryGetFeatureValue(UnityEngine.XR.CommonUsages.gripButton, out triggerValue) && !triggerValue )
         {
             isPressedMinimap = false;
         }
@@ -170,10 +171,10 @@ public class InterfaceManager : MonoBehaviour
 
     public bool SendHaptic(float amplitude, float duration)
     {
-        if (device.TryGetHapticCapabilities(out var capabilities) &&
+        if (left.TryGetHapticCapabilities(out var capabilities) &&
             capabilities.supportsImpulse)
         {
-            return device.SendHapticImpulse(0u, amplitude, duration);
+            return left.SendHapticImpulse(0u, amplitude, duration);
         }
         return false;
     }
@@ -185,8 +186,15 @@ public class InterfaceManager : MonoBehaviour
         UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.LeftHand, LeftHandDevices);
         if (LeftHandDevices.Count > 0)
         {
-            device = LeftHandDevices[0];
+            left = LeftHandDevices[0];
         }
+        var RightHandDevices = new List<UnityEngine.XR.InputDevice>();
+        UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.RightHand, RightHandDevices);
+        if (RightHandDevices.Count > 0)
+        {
+            right = RightHandDevices[0];
+        }
+
         Affichage_Interface_On_Trigger();
         Affichage_Minimap_On_Trigger();
     }

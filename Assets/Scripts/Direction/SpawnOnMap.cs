@@ -1,5 +1,4 @@
-﻿namespace Mapbox.Examples
-{
+﻿
 	using UnityEngine;
 	using Mapbox.Utils;
 	using Mapbox.Unity.Map;
@@ -14,8 +13,8 @@
 
 		[SerializeField]
 		[Geocode]
-		string[] _locationStrings;
-		Vector2d[] _locations1;
+		List<string> _locationStrings;
+        
 		List<Vector2d> _locations;
 
 		[SerializeField]
@@ -32,9 +31,15 @@
 
 		List<GameObject> _spawnedObjects;
 
-		void Awake()
+
+		void Start()
 		{
-			_locations = new List<Vector2d>();
+
+		}
+
+		public void Initialize(List<Vector2d> _locations)
+		{
+			this._locations = _locations;
 			_spawnedObjects = new List<GameObject>();
 
 			//user's position
@@ -43,17 +48,20 @@
 			user_instance.GetComponent<MeshRenderer>().enabled = false;
 
 			//waypoint's position
-			for (int i = 0; i < _locationStrings.Length; i++)
+			for (int i = 0; i < _locations.Count; i++)
 			{
+				/*
 				var locationString = _locationStrings[i];
-				_locations.Add(Conversions.StringToLatLon(locationString));
-				var instance = Instantiate(_markerPrefab,transform);
+				_locations.Add(Conversions.StringToLatLon(locationString));*/
+				var instance = Instantiate(_markerPrefab, transform);
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
-				instance.transform.localPosition +=new Vector3 (0,8,0);
+				instance.transform.localPosition += new Vector3(0, 8, 0);
 				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 				_spawnedObjects.Add(instance);
 			}
 			_spawnedObjects.Add(user_instance);
+
+			this.GetComponent<DirectionsFactory>().Initialize();        
 		}
 
 		private void LateUpdate()
@@ -74,16 +82,18 @@
 				spawnedObject.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 			}
 
-			//Distance between ther user and the next waypoint
-			float nextWaypointDist = (float)Vector3.Distance(_spawnedObjects[0].transform.position, _spawnedObjects[count - 1].transform.position);
-
-			//If the user is near the next waypoint, delete it			
-			if (nextWaypointDist <= visitedWaypointDistance)
+			if (count > 1)
 			{
-				Destroy(_spawnedObjects[0]);
-				_spawnedObjects.RemoveAt(0);
-				_locations.RemoveAt(0);
+				//Distance between ther user and the next waypoint
+				float nextWaypointDist = (float)Vector3.Distance(_spawnedObjects[0].transform.position, _spawnedObjects[count - 1].transform.position);
+				//If the user is near the next waypoint, delete it			
+				if (nextWaypointDist <= visitedWaypointDistance)
+				{
+					Destroy(_spawnedObjects[0]);
+					_spawnedObjects.RemoveAt(0);
+					_locations.RemoveAt(0);
+				}
 			}
+
 		}
 	}
-}

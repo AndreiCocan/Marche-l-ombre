@@ -50,6 +50,11 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 
 		public void Start()
 		{
+			
+		}
+
+        public void Initialize()
+        {
 			foreach (Transform child in transform)
 			{
 				_waypoints.Add(child);
@@ -59,7 +64,7 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 			{
 				_cachedWaypoints.Add(item.position);
 			}
-			_recalculateNext = false;
+			_recalculateNext =	false;
 
 			foreach (var modifier in MeshModifiers)
 			{
@@ -69,7 +74,7 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 			StartCoroutine(QueryTimer());
 		}
 
-		protected virtual void OnDestroy()
+        protected virtual void OnDestroy()
 		{
 			_map.OnInitialized -= Query;
 			_map.OnUpdated -= Query;
@@ -110,13 +115,13 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 					}
 				}
 
-				if (_recalculateNext && _waypoints.Count>0)
+				if (_recalculateNext && _waypoints.Count>1)
 				{
 					Query();
 					_recalculateNext = false;
 				}
 
-				if (_waypoints.Count <= 0)
+				if (_waypoints.Count <= 1)
 				{
 					Destroy(_directionsGO);
 				}

@@ -8,6 +8,7 @@ TagManager:
   - InfoCanvas
   - Interface
   - Minimap
+  - PlayerIcon
   layers:
   - Default
   - TransparentFX

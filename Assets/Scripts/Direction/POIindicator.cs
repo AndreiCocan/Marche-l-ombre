@@ -41,12 +41,13 @@ public class POIindicator : MonoBehaviour
         
     }
 
-    public void spawnPOI(Vector2d location)
+    public void spawnPOI(Vector2d location,string name)
     {
-        GameObject spawnedObject= Instantiate(_PoiIcon, transform);
-        spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
-	    spawnedObject.transform.localPosition += new Vector3(0, 600, 0);
-        spawnedObject.transform.localScale = new Vector3(_spawnScaleIcon*0.5f, _spawnScaleIcon,1);
+        GameObject PoiIcon= Instantiate(_PoiIcon, transform);
+        PoiIcon.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = name;
+        PoiIcon.transform.localPosition = _map.GeoToWorldPosition(location, true);
+	    PoiIcon.transform.localPosition += new Vector3(0, 600, 0);
+        PoiIcon.transform.localScale = new Vector3(_spawnScaleIcon, _spawnScaleIcon,1);
 
         GameObject PoiTracker = Instantiate(_PoiTracker, transform);
         PoiTracker.transform.localPosition = _map.GeoToWorldPosition(location, true);

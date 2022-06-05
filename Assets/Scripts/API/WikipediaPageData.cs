@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//Wikipedia article
+
 [System.Serializable]
 public class pages
 {
@@ -11,15 +13,6 @@ public class pages
     public string pageid, ns;
     public string title, extract, lat, lon;
 
-    public bool equals(object o)
-    {
-        if (o.GetType() == typeof(pages))
-        {
-            return pageid==((pages)o).pageid;
-
-        }
-        return false;
-    }
 }
 
 public class PageComparer : IEqualityComparer<pages>
@@ -34,7 +27,8 @@ public class PageComparer : IEqualityComparer<pages>
     }
 }
 
-    [System.Serializable]
+//Wikipedia search
+[System.Serializable]
 public class Data
 {
     public bool found;

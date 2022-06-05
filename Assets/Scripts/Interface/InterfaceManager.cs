@@ -27,6 +27,7 @@ public class InterfaceManager : MonoBehaviour
     //To know wich canvas to open when all canvas are closed
     private bool _isInfoCanvasActive;
 
+    //VR controllers
     private UnityEngine.XR.InputDevice left;
     private UnityEngine.XR.InputDevice right;
 
@@ -39,8 +40,8 @@ public class InterfaceManager : MonoBehaviour
         ScrollerCanvas.GetComponent<Canvas>().enabled = true;
         _isInfoCanvasActive = false;
     }
-
-
+     
+    //Show InfoCanvas and hide ScrollerCanvas
     public void InfoCanvasActive()
     {
         InfoCanvas.GetComponent<Canvas>().enabled = true;
@@ -51,6 +52,8 @@ public class InterfaceManager : MonoBehaviour
         
         _isInfoCanvasActive = true;
     }
+
+    //Show InfoCanvas and hide ScrollerCanvas
     public void ScrollerCanvasActive()
     {
         InfoCanvas.GetComponent<Canvas>().enabled = false;
@@ -62,6 +65,7 @@ public class InterfaceManager : MonoBehaviour
         _isInfoCanvasActive = false;
     }
 
+    //Show the GUI (show the last canvas opened before it was hidden)
     public void AllCanvasEnable()
     {
         if (_isInfoCanvasActive == true)
@@ -74,19 +78,20 @@ public class InterfaceManager : MonoBehaviour
         }
     }
 
+    //Hide all GUI
     public void AllCanvasDisable()
     {
         InfoCanvas.GetComponent<Canvas>().enabled = false;
         ScrollerCanvas.GetComponent<Canvas>().enabled = false;
     }
 
-
+    //Load the page data to the InfoCanvas
     public void ConfigureInfoCanvas(pages _page)
     {
         InfoCanvas.GetComponent<InfoCanvas>().ConfigureCanvas(_page);
     } 
 
-    // Show the interface when the trigger is pressed
+    // Show/Hide the interface when the trigger is pressed
     private void Affichage_Interface_On_Trigger()
     {
 
@@ -130,7 +135,7 @@ public class InterfaceManager : MonoBehaviour
        }
         
     }
-
+    //Show/Hide the minimap when the trigger is pressed
     void Affichage_Minimap_On_Trigger()
     {
         bool triggerValue;
@@ -169,6 +174,7 @@ public class InterfaceManager : MonoBehaviour
 
     }
 
+    //Haptic impulsion  in the left controller
     public bool SendHaptic(float amplitude, float duration)
     {
         if (left.TryGetHapticCapabilities(out var capabilities) &&

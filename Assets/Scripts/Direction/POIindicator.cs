@@ -21,11 +21,6 @@ public class POIindicator : MonoBehaviour
     [SerializeField]
     float _spawnScaleTracker = 30f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     protected void Awake()
     {
@@ -34,21 +29,18 @@ public class POIindicator : MonoBehaviour
             _map = FindObjectOfType<AbstractMap>();
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
+    //Spawn indicators on the POI found with the Wikipedia search
     public void spawnPOI(Vector2d location,string name)
     {
+        //Spawn the POI icon for the minimap
         GameObject PoiIcon= Instantiate(_PoiIcon, transform);
         PoiIcon.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = name;
         PoiIcon.transform.localPosition = _map.GeoToWorldPosition(location, true);
 	    PoiIcon.transform.localPosition += new Vector3(0, 600, 0);
         PoiIcon.transform.localScale = new Vector3(_spawnScaleIcon, _spawnScaleIcon,1);
 
+        //Spawn POI tracker
         GameObject PoiTracker = Instantiate(_PoiTracker, transform);
         PoiTracker.transform.localPosition = _map.GeoToWorldPosition(location, true);
         PoiTracker.transform.localPosition += new Vector3(0, 1, 0);

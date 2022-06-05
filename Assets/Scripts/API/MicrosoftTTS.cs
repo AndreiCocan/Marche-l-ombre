@@ -12,6 +12,8 @@ public class MicrosoftTTS : MonoBehaviour
     
     [SerializeField]
     string textToSay;
+
+    //Voices to choose from
     [SerializeField]
     Voices voice;
     public enum Voices
@@ -27,7 +29,7 @@ public class MicrosoftTTS : MonoBehaviour
 
     private static string voiceName;
 
-
+    //Api result treatment
     static void OutputSpeechSynthesisResult(SpeechSynthesisResult speechSynthesisResult, string text)
     {
         switch (speechSynthesisResult.Reason)
@@ -51,9 +53,11 @@ public class MicrosoftTTS : MonoBehaviour
         }
     }
 
+    //Launch API request
     public async static Task Speech(string text)
     {
         var speechConfig = SpeechConfig.FromSubscription(YourSubscriptionKey, YourServiceRegion);
+        
         // The language of the voice that speaks.
         speechConfig.SpeechSynthesisVoiceName = voiceName;
 
@@ -65,8 +69,10 @@ public class MicrosoftTTS : MonoBehaviour
         }
     }
 
+    
     private void Update()
     {
+        //Set the right voice parametre for the voice
         switch (voice)
         {
             case Voices.Denise:
@@ -76,10 +82,10 @@ public class MicrosoftTTS : MonoBehaviour
                 voiceName = "fr-FR-HenriNeural";
                 break;
             case Voices.Ariane:
-                voiceName = "fr-FR-ArianeNeural";
+                voiceName = "fr-CH-ArianeNeural	";
                 break;
             case Voices.Fabrice:
-                voiceName = "fr-FR-FabriceNeural";
+                voiceName = "fr-CH-FabriceNeural";
                 break;
             case Voices.Sylvie:
                 voiceName = "fr-CA-SylvieNeural";
@@ -88,7 +94,7 @@ public class MicrosoftTTS : MonoBehaviour
                 voiceName = "fr-CA-AntoineNeural";
                 break;
             case Voices.Jean:
-                voiceName = "fr-FR-JeanNeural";
+                voiceName = "fr-CA-JeanNeural";
                 break;
         }
 

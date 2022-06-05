@@ -25,9 +25,6 @@ public class GeoGetter : MonoBehaviour, IFeaturePropertySettable
     [SerializeField]
 	float visitedDistance = 20;
 
-    [SerializeField]
-    float SeeingDistance = 100;
-
     public float dis;
 
     public bool isVisited = false;
@@ -48,12 +45,14 @@ public class GeoGetter : MonoBehaviour, IFeaturePropertySettable
 		}
 
 	}
-    
+
+	//Get the parent game object (mapbox POI)
 	private void Start()
 	{
         parent = this.transform.parent.gameObject;
 	}
 
+    //Get name and geographical position of the parent object (mapbox POI)
 	public void Set(Dictionary<string, object> props)
 	{
 		parent = this.transform.parent.gameObject;
@@ -66,6 +65,7 @@ public class GeoGetter : MonoBehaviour, IFeaturePropertySettable
 		}
 	}
 
+    //Check if the player is close enough to the POI to launch a Wikipedia raquest
     private void LateUpdate()
     {
 		//Distance between ther user and the next waypoint
@@ -82,10 +82,5 @@ public class GeoGetter : MonoBehaviour, IFeaturePropertySettable
             isVisited = false;
         }
 
-
-        if(dis<=SeeingDistance && isVisited == false)
-        {
-
-        }
     }
 }

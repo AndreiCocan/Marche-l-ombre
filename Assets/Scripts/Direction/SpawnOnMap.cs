@@ -32,22 +32,20 @@
 		List<GameObject> _spawnedObjects;
 
 
-		void Start()
-		{
-
-		}
-
+		//Waypoint Initilization
 		public void Initialize(List<Vector2d> _locations)
 		{
 			this._locations = _locations;
 			_spawnedObjects = new List<GameObject>();
 
-			//user's position
+			//Custom waypoint on player to start the path from the player position
 			var user_instance = Instantiate(_markerPrefab, transform);
 			user_instance.transform.localPosition = _user.transform.position;
+			
+			//Make the custom waypoint invisible
 			user_instance.GetComponent<MeshRenderer>().enabled = false;
 
-			//waypoint's position
+			//Place waypoints on the map
 			for (int i = 0; i < _locations.Count; i++)
 			{
 				/*
@@ -61,6 +59,7 @@
 			}
 			_spawnedObjects.Add(user_instance);
 
+			//Path calculation
 			this.GetComponent<DirectionsFactory>().Initialize();        
 		}
 

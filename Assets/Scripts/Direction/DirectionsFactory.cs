@@ -48,11 +48,7 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 			_map.OnUpdated += Query;
 		}
 
-		public void Start()
-		{
-			
-		}
-
+        //Initilization of the DirectionFacotry
         public void Initialize()
         {
 			foreach (Transform child in transform)
@@ -80,6 +76,7 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 			_map.OnUpdated -= Query;
 		}
 
+		//Mapbox Direction Query to get the itinirary path
 		void Query()
 		{
 			var count = _waypoints.Count;
@@ -93,15 +90,18 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 			_directions.Query(_directionResource, HandleDirectionsResponse);
 		}
 
+        //Real time update with a custom frequency
 		public IEnumerator QueryTimer()
 		{
 			while (true)
 			{
+                //Path Update frequency
 				yield return new WaitForSeconds(UpdateFrequency);
 
 				_waypoints = new List<Transform>();
 
-				foreach (Transform child in transform)
+                //Get all the waypoints from the scene and add them to the list (Spawned from SpawnOnMap)
+                foreach (Transform child in transform)
 				{
 					_waypoints.Add(child);
 				}
@@ -128,7 +128,8 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 			}
 		}
 
-		void HandleDirectionsResponse(DirectionsResponse response)
+        //Handle the response from the Mapbox Direction Query
+        void HandleDirectionsResponse(DirectionsResponse response)
 		{
 			if (response == null || null == response.Routes || response.Routes.Count < 1)
 			{
@@ -150,9 +151,11 @@ namespace Mapbox.Unity.MeshGeneration.Factories
 				mod.Run(feat, meshData, _map.WorldRelativeScale);
 			}
 
-			CreateGameObject(meshData);
+            //Create the GameObject for the path
+            CreateGameObject(meshData);
 		}
 
+        //Mesh creation for the path
 		GameObject CreateGameObject(MeshData data)
 		{
 			if (_directionsGO != null)

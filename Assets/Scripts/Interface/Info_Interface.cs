@@ -23,8 +23,6 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
     [SerializeField]
     RecyclableScrollRect _recyclableScrollRect;
 
-
-
     InterfaceManager InterfaceManag;
     POIindicator poiindc;
     private static List<pages> pages;
@@ -54,40 +52,7 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
 
 
 
-
-    // Detect if the user is looking at the point of interest
-    private bool IsFacing()
-    {
-        coordinate = /* Take the exact coordinate of the point of interest (API script) */
-        direction = (coordinate - _camera.transform.position).normalized;
-        vu = Vector3.Dot(direction, transform.forward);
-
-        if (vu <= 1 && vu >= 0.7)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    private bool IsNear()
-    {
-        coordinate = /* Take the exact coordinate of the point of interest (API script) */
-        difference = new Vector3(_camera.transform.position.x - coordinate.x, _camera.transform.position.y - coordinate.y, _camera.transform.position.z - coordinate.z);
-        distance = Math.Sqrt(Math.Pow(difference.x, 2f) + Math.Pow(difference.y, 2f) + Math.Pow(difference.z, 2f));
-        if (distance < 40)
-        {
-            return true;
-        } else
-        {
-            return false;
-        }
-    }
-
-    
-    // Change the informations on the canvas depending on the point of interest location
+    // Add the pages to the list if not allready present
     public int UpdateInfos(Data data)
     {
         PageComparer pagec = new PageComparer();
@@ -101,23 +66,16 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
                     poiindc.spawnPOI(new Vector2d(Convert.ToDouble(page.lat, CultureInfo.InvariantCulture), Convert.ToDouble(page.lon, CultureInfo.InvariantCulture)),page.title);
                 }
             }
+            //Make the haptic feedback when new page added
             InterfaceManag.SendHaptic(0.3f, 0.3f);
         }
+        //Update the scroll rect
         _recyclableScrollRect.ReloadData(this);
 
         return 0;
     }
 
     
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (IsFacing() && IsNear())
-        {
-           // UpdateInfos();
-        }
-    }
 
     #region DATA-SOURCE
 
@@ -129,8 +87,7 @@ public class Info_Interface : MonoBehaviour , IRecyclableScrollRectDataSource
     }
 
 
-    // Data source method. Called for a cell every time it is recycled.
-    // Implement this method to do the necessary cell configuration.
+    // Data source method. Called for a cell every time it is recycled. Implement this method to do the necessary cell configuration.
 
     public void SetCell(ICell cell, int index)
     {

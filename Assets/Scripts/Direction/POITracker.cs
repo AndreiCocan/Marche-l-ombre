@@ -20,6 +20,7 @@ public class POITracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Billboard effect
         transform.LookAt(player);
     }
 }

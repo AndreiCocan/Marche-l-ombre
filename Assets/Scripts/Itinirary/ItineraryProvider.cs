@@ -20,6 +20,7 @@ public class ItineraryProvider: MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        //If the is no ItinararynData.json in the persistent path, creat a default itinirary, else load the itinirary from the persistent path
         path = Path.Combine(Application.persistentDataPath, "ItinararynData.json");
         if (!File.Exists(path))
         {
@@ -27,8 +28,7 @@ public class ItineraryProvider: MonoBehaviour
             string itiJSON = JsonUtility.ToJson(itinirary);
             File.WriteAllText(path, itiJSON);
             Debug.Log("Standard Itinirary loaded");
-            //Debug.Log(itiJSON);
-            //Debug.Log(Application.persistentDataPath);
+
         }
         else
         {
@@ -41,7 +41,7 @@ public class ItineraryProvider: MonoBehaviour
         {
             spawnOnMap= FindObjectOfType<SpawnOnMap>();
         }
-
+        //Spawn waypoints from the itinirary
         spawnOnMap.Initialize(itinirary.waypoints);
 
     }
@@ -56,9 +56,4 @@ public class ItineraryProvider: MonoBehaviour
         map.Initialize(itinirary.start,15);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

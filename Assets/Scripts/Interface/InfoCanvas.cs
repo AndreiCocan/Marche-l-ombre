@@ -13,10 +13,11 @@ public class InfoCanvas : MonoBehaviour
     [SerializeField]
     private GameObject Audioguid_button;
 
-    //Model
+    //pages displayed
     private pages _page;
 
     //This is called from the SetCell method in DataSource
+    //Display pages content
     public void ConfigureCanvas(pages page)
     {
         _page = page;

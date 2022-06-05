@@ -20,8 +20,7 @@ public class MinimapPOIAllwaysFacingPlayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        // Rotate POI icons to make them readable from the player's perspective (vertical)
         transform.rotation = Quaternion.Euler(player.rotation.eulerAngles.x, player.rotation.eulerAngles.y+90, 0);
-
-
     }
 }

@@ -20,6 +20,7 @@ public class BackButton : MonoBehaviour
 
     private void ButtonListener()
     {
+        //Get back to the Scroller Canvas
         InterfaceManag.ScrollerCanvasActive();
     }
 }

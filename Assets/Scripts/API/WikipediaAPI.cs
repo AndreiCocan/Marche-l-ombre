@@ -7,15 +7,22 @@ using Mapbox.Utils;
 
 public class WikipediaAPI : MonoBehaviour
 {
-    public Vector2d Lastlatlong = new Vector2d(0, 0);
+    //Name of the current reasearch
     public  string name = "";
+    
+    //Attributes  of the last reasearch
     public string LastName = "";
-    
-    
+    public Vector2d Lastlatlong = new Vector2d(0, 0);
+
+    //Url to rearch by article title (to get article)
     string urlByName= @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=";
+    //Url to rearch by geographical position (to get articles title)
     string urlByGeoSearch = @"https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&list=geosearch&gsradius=50&gscoord=";
     
+    //Result of the reasearch
     private Data data;
+    
+    //Interface GUI du bras gauche
     public Info_Interface ifi;
 
     private void Start()
@@ -25,6 +32,8 @@ public class WikipediaAPI : MonoBehaviour
             ifi = FindObjectOfType<Info_Interface>();
         }
     }
+    
+    //Init a search from a position and a name
     public async void Search(Vector2d latlong, string name)
     {
 
@@ -40,9 +49,10 @@ public class WikipediaAPI : MonoBehaviour
         }
     }
 
-
+    //Api request
     IEnumerator  LoadData()
     {
+        //Search by geographical position to get a liste of the titles of nearby articles
         WWW wwwGeosearch = new WWW(urlByGeoSearch+data.latlon.x.ToString().Replace(',','.')+"|"+ data.latlon.y.ToString().Replace(',', '.'));
         yield return wwwGeosearch;
         if(wwwGeosearch.error==null)
@@ -69,16 +79,17 @@ public class WikipediaAPI : MonoBehaviour
                 Debug.Log("datanoutfoud");
             }
         }
-
+        //If no article found, create an artical (pages) with the name from the Search function 
         if (data.found == false)
         {
             data = new Data();
             data.pages.Add(new pages());
             data.pages[0].title = name;
         }
-        foreach(pages pages in data.pages)
-        {
 
+        //Search by article title to get the article extract
+        foreach (pages pages in data.pages)
+        {
                 WWW wwwExtract = new WWW(urlByName + pages.title);
                 yield return wwwExtract;
                 if (wwwExtract.error == null)
@@ -105,6 +116,7 @@ public class WikipediaAPI : MonoBehaviour
                 }
             Debug.Log(pages.title+":"+pages.extract);
         }
+        //Add the result to the interface list
         ifi.UpdateInfos(data);
     }
 }
